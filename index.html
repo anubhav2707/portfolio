@@ -1,0 +1,1833 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anubhav Khandelwal Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Anubhav Khandelwal: CEO and Lead Engineer. Case studies, product films and proof.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,700..900&family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Indie+Flower&display=swap">
+<script>(function(){var h=document.documentElement;try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('is-loading');setTimeout(function(){h.classList.remove('is-loading')},4500)}}catch(e){}})();</script>
+<style>
+:root{
+  --ink:#0B0C0E;--ink-2:#111317;--ink-3:#171A1F;--ink-4:#22262D;--ink-glow:#16181D;
+  --fg:#EDEBE6;--fg-2:#AAA8A2;--fg-3:#8A8882;
+  --line:rgba(237,235,230,.12);--line-2:rgba(237,235,230,.26);
+  --ember:#FF5A1F;--ember-2:#FF8656;--ember-deep:#B5370C;--ember-soft:rgba(255,90,31,.16);--on-ember:#160904;
+  --pass:#45D79C;--pass-line:rgba(69,215,156,.42);--pass-soft:rgba(69,215,156,.08);
+  --warn:#F4C04E;--warn-line:rgba(244,192,78,.42);--warn-soft:rgba(244,192,78,.08);
+  --violet:#B9A6FF;--violet-line:rgba(185,166,255,.45);
+  --paper:#ECE9E2;--paper-fg:#141414;--paper-2:#58554F;--paper-line:rgba(20,20,20,.16);--paper-on:rgba(236,233,226,.72);
+  --film:#050506;--black:#000;--white:#fff;--shade:rgba(0,0,0,.62);
+  --lcd-bg:#0D1A12;--lcd-line:#24412D;--lcd-fg:#8CFFB5;--lcd-lbl:#86B99A;
+  --f-sans:"Geist","Inter Tight",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-serif:var(--f-sans);
+  --f-mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --gl:max(clamp(16px,4vw,56px),env(safe-area-inset-left,0px));
+  --gr:max(clamp(16px,4vw,56px),env(safe-area-inset-right,0px));
+  --nav-h:64px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  color-scheme:dark;
+}
+html{background:var(--ink);-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+html.menu-open{overflow:hidden}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--f-sans);font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip}
+.is-loading body::after{content:"";position:fixed;inset:0;background:var(--ink);z-index:9999}
+img,video{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:inherit}
+h1,h2,h3,h4,h5,p,ol,ul,dl,dd,figure{margin:0;padding:0}
+ol,ul{list-style:none}
+::selection{background:var(--ember);color:var(--on-ember)}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:4px}
+.paper :focus-visible{outline-color:var(--ember-deep)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-80px;z-index:10002;background:var(--ember);color:var(--on-ember);padding:10px 14px;border-radius:8px;font-weight:600}
+.skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
+.wrap{width:100%;max-width:1520px;margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
+.mono{font-family:var(--f-mono);font-size:.75rem;line-height:1.45;letter-spacing:.06em;text-transform:uppercase;font-weight:400}
+em,i{font-style:normal;font-weight:inherit}
+.em{color:var(--ember)}
+.label{display:flex;gap:.75rem;align-items:center;color:var(--fg-2)}
+.label::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.paper .label,.paper .lead{color:var(--paper-2)}
+.h-xl{font-size:clamp(2.6rem,1rem + 6.2vw,7.5rem);line-height:.94;letter-spacing:-.045em;font-weight:500;text-wrap:balance}
+.lead{font-size:clamp(1.05rem,.95rem + .4vw,1.3rem);color:var(--fg-2);max-width:58ch;line-height:1.55}
+.sec-head{display:grid;gap:clamp(1rem,2vw,1.6rem);margin-bottom:clamp(2.5rem,6vw,5rem)}
+.sw{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.sc{display:inline-block;will-change:transform}
+.w{transition:none}
+
+/* grain */
+.grain{position:fixed;top:-50%;left:-50%;width:200%;height:200%;pointer-events:none;z-index:9980;opacity:.07;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.4s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:10000;background:var(--ink);color:var(--fg);display:flex;flex-direction:column;justify-content:space-between;padding-block:calc(22px + env(safe-area-inset-top,0px)) calc(26px + env(safe-area-inset-bottom,0px));padding-left:var(--gl);padding-right:var(--gr)}
+.loader-top{display:flex;justify-content:space-between;gap:1rem;color:var(--fg-2)}
+.loader-count{font-size:clamp(5rem,3rem + 14vw,17rem);font-weight:500;letter-spacing:-.06em;line-height:.8;font-variant-numeric:tabular-nums}
+.loader-bar{height:1px;background:var(--line);margin-top:1.25rem}
+.loader-bar i{display:block;height:100%;background:var(--ember);transform-origin:left;transform:scaleX(0)}
+.loader-curve{position:absolute;left:-10%;right:-10%;top:calc(100% - 1px);height:14vh;background:var(--ink);border-radius:0 0 50% 50%}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:9000;padding-top:env(safe-area-inset-top,0px);mix-blend-mode:difference;color:var(--white);transition:transform .7s var(--ease)}
+.nav.hide{transform:translateY(-110%)}
+.nav-in{display:flex;align-items:center;gap:1.75rem;height:var(--nav-h)}
+.brand{font-weight:600;letter-spacing:-.02em;font-size:1rem;display:inline-flex;align-items:center;gap:.55rem;white-space:nowrap}
+.brand i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.nav-links{display:flex;gap:1.75rem;margin-left:auto}
+.nav-links a{font-size:.92rem;position:relative;padding-block:.3rem}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav-links a:hover::after,.nav-links a.on::after{transform:scaleX(1);transform-origin:left}
+.nav-clock{white-space:nowrap}
+.menu-btn{display:none;align-items:center;min-height:44px;padding-inline:.25rem;margin-left:auto}
+.progress{position:absolute;left:0;right:0;bottom:0;height:1px}
+.progress i{display:block;height:100%;background:currentColor;transform-origin:left;transform:scaleX(0)}
+@media (max-width:860px){.nav-links,.nav-clock{display:none}.menu-btn{display:inline-flex}}
+html.menu-open .nav{mix-blend-mode:normal;color:var(--on-ember)}
+html.menu-open .progress{opacity:0}
+.menu{position:fixed;inset:0;z-index:8990;background:var(--ember);color:var(--on-ember);display:flex;flex-direction:column;justify-content:flex-end;padding-block:calc(var(--nav-h) + 24px + env(safe-area-inset-top,0px)) calc(32px + env(safe-area-inset-bottom,0px));padding-left:var(--gl);padding-right:var(--gr)}
+.menu ol{display:grid;gap:.15rem}
+.menu ol a{display:flex;align-items:baseline;gap:1rem;font-size:clamp(2.6rem,11vw,5rem);font-weight:500;letter-spacing:-.045em;line-height:1.08}
+.menu ol a span{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em}
+.menu-foot{margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+/* cursor follower */
+.cursor{position:fixed;left:0;top:0;z-index:9995;pointer-events:none;opacity:0;transition:opacity .3s;mix-blend-mode:difference}
+.cursor.on{opacity:1}
+.cursor.is-label{mix-blend-mode:normal}
+.c-ring{position:fixed;left:0;top:0;will-change:transform}
+.c-ring-in{position:absolute;left:-17px;top:-17px;width:34px;height:34px;border-radius:50%;border:1px solid var(--white);display:grid;place-items:center;transition:width .45s var(--ease),height .45s var(--ease),left .45s var(--ease),top .45s var(--ease),background-color .3s,border-color .3s}
+.c-ring-in em{font-family:var(--f-mono);font-style:normal;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-ember);opacity:0;transition:opacity .2s}
+.cursor.is-link .c-ring-in{width:56px;height:56px;left:-28px;top:-28px;background:var(--white)}
+.cursor.is-label .c-ring-in{width:92px;height:92px;left:-46px;top:-46px;background:var(--ember);border-color:var(--ember)}
+.cursor.is-label .c-ring-in em{opacity:1}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.8rem 1.35rem;border-radius:999px;border:1px solid var(--line-2);font-size:.95rem;font-weight:500;line-height:1.1;overflow:hidden;isolation:isolate;transition:color .45s var(--ease),border-color .45s var(--ease);white-space:nowrap}
+.btn::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--fg);transform:translateY(102%);transition:transform .55s var(--ease);z-index:-1}
+.btn:hover{color:var(--ink);border-color:var(--fg)}
+.btn:hover::before{transform:translateY(0)}
+.btn.primary{background:var(--ember);border-color:var(--ember);color:var(--on-ember)}
+.btn.small{min-height:40px;padding:.6rem 1rem;font-size:.85rem}
+.btn .arr{display:inline-block;transition:transform .45s var(--ease)}
+.btn:hover .arr{transform:translate(3px,-3px)}
+.tri{width:0;height:0;border-left:9px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.vid-toggle{position:absolute;right:12px;bottom:12px;z-index:3;min-height:34px;padding:.4rem .85rem;border-radius:999px;background:var(--shade);color:var(--white);font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+/* hero: the screening room */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(90% 70% at 50% 62%,#16120F 0%,var(--ink) 65%)}
+.hero-in{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;padding-top:calc(var(--nav-h) + clamp(.75rem,2.5vh,1.75rem) + env(safe-area-inset-top,0px));padding-bottom:clamp(1.5rem,4vh,2.5rem)}
+.b-head{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.eyebrow{color:var(--fg-2);letter-spacing:.14em}
+.b-name{font-size:clamp(40px,6vw,104px);line-height:.92;letter-spacing:-.05em;font-weight:600}
+.b-name .p{display:inline-block}
+.rise{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.rise>span{display:block}
+.b-state{max-width:62ch;font-size:clamp(16px,1.25vw,19px);line-height:1.45;color:var(--fg-2)}
+.b-stage{position:relative;width:min(76vw,calc((100vh - 455px) * 1.7778));width:min(76vw,calc((100svh - 455px) * 1.7778));min-width:280px;margin-top:clamp(18px,3.4vh,34px);perspective:1400px}
+.b-rig{position:relative;transform-style:preserve-3d;transform:rotateX(var(--rx,10deg)) rotateY(var(--ry,0deg)) scale(var(--s,1))}
+.b-amb{position:absolute;left:-14%;top:-18%;width:128%;height:136%;z-index:-1;filter:blur(56px) sepia(.45) saturate(1.8);opacity:.45;border-radius:40px;pointer-events:none}
+.b-floor{position:absolute;left:8%;right:8%;bottom:-36px;height:60px;z-index:-2;background:radial-gradient(closest-side,rgba(255,180,140,.12),rgba(0,0,0,0));filter:blur(10px);pointer-events:none}
+.b-screen{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--black);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 50px 120px -40px rgba(0,0,0,.95);cursor:pointer}
+.b-screen video{width:100%;height:100%;object-fit:cover}
+.b-screen::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(0,0,0,0) 55%,rgba(0,0,0,.35));pointer-events:none}
+.b-hud{position:absolute;z-index:1;left:14px;right:14px;top:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);pointer-events:none}
+.b-hud .rec,.b-hud .tc{padding:6px 8px;border-radius:6px;background:rgba(0,0,0,.55);line-height:1}
+.b-hud .rec::before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--ember);animation:blink 1.6s steps(2,start) infinite}
+@keyframes blink{50%{opacity:.2}}
+.b-hud-r{display:flex;align-items:center;gap:6px}
+.b-pause{pointer-events:auto;padding:5px 9px;border-radius:6px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.28);color:var(--white);font:inherit;letter-spacing:inherit;text-transform:inherit;line-height:1;cursor:pointer}
+.b-cap{display:flex;flex-direction:column;gap:12px;width:100%;margin-top:22px}
+.b-segs{display:flex;gap:6px}
+.b-segs i{position:relative;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
+.b-segs i b{position:absolute;inset:0;background:var(--ember);transform-origin:left;transform:scaleX(0);transition:transform .26s linear}
+.b-capline{display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap}
+.b-now{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:15px;line-height:1.4;color:var(--fg-2)}
+.b-now .mono{color:var(--fg-3)}
+.b-now strong{font-weight:600;color:var(--fg)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:640px){
+  .b-name .p{display:block}
+  .b-name{font-size:15vw}
+  .b-stage{width:100%}
+  .hero .cta{width:100%}
+  .hero .cta .btn{flex:1 1 auto}
+}
+@media (prefers-reduced-motion:reduce){.b-hud .rec::before{animation:none}}
+
+/* about */
+.about{padding-block:clamp(6rem,13vw,11rem) clamp(4rem,8vw,7rem)}
+.manifesto{margin-top:clamp(1.5rem,3vw,2.5rem);font-size:clamp(1.75rem,.95rem + 2.9vw,3.9rem);line-height:1.1;letter-spacing:-.032em;font-weight:450;max-width:18.5em}
+.manifesto em{color:var(--ember)}
+.about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:clamp(3.5rem,7vw,6rem)}
+.about-grid>div{border-top:1px solid var(--line);padding-top:1.25rem}
+.about-grid h3{color:var(--fg-2);margin-bottom:.85rem}
+.about-grid li{padding-block:.45rem;font-size:1.05rem;font-weight:500}
+.about-grid li span{display:block;color:var(--fg-2);font-size:.92rem;font-weight:400}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr;gap:1.5rem}}
+
+/* stats */
+.stats{padding-bottom:clamp(5rem,10vw,9rem)}
+.stats ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats li{min-width:0}
+.stats li a{display:flex;flex-direction:column;gap:.9rem;height:100%;padding:1.5rem 1.25rem 1.75rem;border-right:1px solid var(--line);transition:background-color .5s var(--ease)}
+.stats li:last-child a{border-right:0}
+.stats li a:hover{background:var(--ink-2)}
+.stat-k{display:flex;justify-content:space-between;gap:.5rem;color:var(--fg-2)}
+.stat-n{display:flex;align-items:baseline;gap:.2em;font-size:clamp(2.4rem,1.3rem + 3.3vw,5rem);font-weight:500;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stat-n small{font-size:.42em;letter-spacing:-.02em;color:var(--fg-2);font-weight:400}
+.stat-l{color:var(--fg-2);font-size:.92rem;max-width:28ch}
+.live-dot{width:.22em;height:.22em;border-radius:50%;background:var(--pass);align-self:center;box-shadow:0 0 0 0 var(--pass-line);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--pass-line)}70%{box-shadow:0 0 0 10px rgba(69,215,156,0)}100%{box-shadow:0 0 0 0 rgba(69,215,156,0)}}
+@media (max-width:900px){.stats ul{grid-template-columns:repeat(2,minmax(0,1fr))}.stats li:nth-child(2) a{border-right:0}.stats li:nth-child(n+3) a{border-top:1px solid var(--line)}}
+
+/* work index (paper) */
+.paper{background:var(--paper);color:var(--paper-fg)}
+.work{position:relative;padding-block:clamp(5rem,10vw,9rem)}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1.75rem}
+.filter{display:inline-flex;gap:.5rem;align-items:center;min-height:44px;padding:.55rem 1rem;border:1px solid var(--paper-line);border-radius:999px;font-size:.92rem;transition:background-color .3s,color .3s,border-color .3s}
+.filter .n{font-family:var(--f-mono);font-size:.72rem;color:var(--paper-2)}
+.filter:hover{border-color:var(--paper-fg)}
+.filter[aria-pressed="true"]{background:var(--paper-fg);color:var(--paper);border-color:var(--paper-fg)}
+.filter[aria-pressed="true"] .n{color:var(--paper-on)}
+.count{margin-left:auto;color:var(--paper-2)}
+.rows{border-top:1px solid var(--paper-line)}
+.row{border-bottom:1px solid var(--paper-line)}
+.row-in{position:relative;display:grid;grid-template-columns:3.25rem minmax(0,1fr) 11.5rem 14.5rem 2rem;gap:1.5rem;align-items:start;width:100%;padding-block:1.7rem;isolation:isolate;transition:color .45s var(--ease)}
+.row-in::before{content:"";position:absolute;top:0;bottom:0;left:calc(-1 * var(--gl));right:calc(-1 * var(--gr));background:var(--paper-fg);transform:scaleY(0);transform-origin:bottom;transition:transform .55s var(--ease);z-index:-1}
+a.row-in:hover,button.row-in:hover,a.row-in:focus-visible,button.row-in:focus-visible{color:var(--paper)}
+a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::before,button.row-in:focus-visible::before{transform:scaleY(1);transform-origin:top}
+.r-n{font-family:var(--f-mono);font-size:.78rem;padding-top:.8rem;color:var(--paper-2);transition:color .45s}
+.r-main{min-width:0}
+.r-t{display:block;font-size:clamp(1.6rem,1rem + 2.3vw,3.3rem);font-weight:500;letter-spacing:-.038em;line-height:1;transition:transform .55s var(--ease)}
+.r-d{display:block;margin-top:.7rem;color:var(--paper-2);font-size:.96rem;max-width:64ch;line-height:1.5;transition:color .45s}
+.r-meta{display:contents}
+.r-k{font-size:.92rem;padding-top:.75rem}
+.r-tag{display:inline-block;margin:.35rem .35rem 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;padding:.18rem .5rem;border:1px solid currentColor;border-radius:999px;opacity:.8}
+.r-k .r-tag:first-child{margin-left:0}
+.r-k>span:first-child{display:block}
+.r-f{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.02em;padding-top:.85rem;line-height:1.5}
+.r-go{padding-top:.55rem;font-size:1.35rem;justify-self:end;transition:transform .5s var(--ease)}
+.row-in:is(a,button):hover .r-t{transform:translateX(.6rem)}
+.row-in:is(a,button):hover .r-go{transform:rotate(-45deg)}
+.row-in:is(a,button):hover .r-n,.row-in:is(a,button):hover .r-d,.row-in:is(a,button):focus-visible .r-n,.row-in:is(a,button):focus-visible .r-d{color:var(--paper-on)}
+@media (max-width:1100px){
+  .row-in{grid-template-columns:2.5rem minmax(0,1fr) 1.5rem;gap:.25rem 1rem}
+  .r-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.25rem;grid-column:2;margin-top:.75rem}
+  .r-k,.r-f{padding-top:0}
+  .r-k>span:first-child{display:inline}
+  .r-tag{margin:0 0 0 .4rem}
+  .r-go{grid-column:3;grid-row:1;font-size:1.1rem}
+}
+.preview{position:fixed;left:0;top:0;z-index:60;pointer-events:none;will-change:transform;display:none}
+.has-cursor .preview{display:block}
+.preview-in{position:absolute;left:0;top:0;width:clamp(260px,23vw,370px);aspect-ratio:4/3;transform:translate(-50%,-50%) scale(0) rotate(var(--rot,0deg));transition:transform .5s var(--ease);border-radius:14px;overflow:hidden;background:var(--ink);box-shadow:0 30px 70px -25px rgba(0,0,0,.55)}
+.preview.on .preview-in{transform:translate(-50%,-50%) scale(1) rotate(var(--rot,0deg))}
+.pv{position:absolute;inset:0;opacity:0;transition:opacity .25s}
+.pv.on{opacity:1}
+.pv img{width:100%;height:100%;object-fit:cover}
+.pv.tall img{object-fit:contain;background:var(--ink-3)}
+.pv-txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:1.25rem;background:var(--ember);color:var(--on-ember)}
+.pv-txt b{font-size:1.65rem;font-weight:500;letter-spacing:-.035em;line-height:1.05}
+
+/* cases */
+.cases-intro{padding-block:clamp(5rem,10vw,9rem) 0}
+.cases-intro .sec-head{margin-bottom:clamp(2rem,4vw,3rem)}
+.case{position:relative;padding-block:clamp(4.5rem,9vw,8rem);border-top:1px solid var(--line)}
+.case-head{position:relative}
+.case-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.25rem;align-items:center;color:var(--fg-2);margin-bottom:clamp(1.25rem,2.5vw,2rem);position:relative;z-index:1}
+.case-meta .idx{color:var(--fg)}
+.case-title{position:relative;z-index:1;font-size:clamp(3rem,1rem + 8vw,10rem);font-weight:500;letter-spacing:-.055em;line-height:.9;text-wrap:balance;max-width:14ch}
+.case-num{position:absolute;right:0;top:-.15em;z-index:0;font-size:clamp(6rem,2rem + 14vw,17rem);font-weight:700;line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px var(--line-2);pointer-events:none;-webkit-user-select:none;user-select:none}
+.case-dek{position:relative;z-index:1;margin-top:clamp(1.25rem,2.5vw,2rem);font-family:var(--f-sans);font-style:normal;font-weight:400;font-size:clamp(1.25rem,.95rem + 1vw,1.9rem);line-height:1.28;color:var(--fg-2);max-width:34ch;letter-spacing:-.01em}
+.case-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(2rem,6vw,7rem);margin-top:clamp(3rem,6vw,5rem);align-items:start}
+.pbr{display:grid;gap:2rem}
+.pbr>div{display:grid;grid-template-columns:8.5rem minmax(0,1fr);column-gap:1.5rem;row-gap:.9rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+.pbr dt{color:var(--fg-2);padding-top:.25rem}
+.pbr dd{margin:0;max-width:64ch;grid-column:2}
+.pbr strong{color:var(--ember-2);font-weight:600}
+.case-side{position:sticky;top:calc(var(--nav-h) + 24px);display:grid;gap:1.5rem;min-width:0}
+.side-block{display:grid;gap:.35rem;font-size:.96rem;color:var(--fg-2)}
+.side-block .mono{color:var(--fg)}
+.ledger{border-top:1px solid var(--line)}
+.ledger li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-block:.8rem;border-bottom:1px solid var(--line);font-size:.95rem}
+.ledger .k{color:var(--fg-2)}
+.ledger .v{font-family:var(--f-mono);font-size:.82rem;text-align:right}
+.ledger a{text-decoration:underline;text-underline-offset:3px}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem}
+@media (max-width:960px){.case-grid{grid-template-columns:1fr}.case-side{position:static}}
+@media (max-width:600px){.pbr>div{grid-template-columns:1fr;row-gap:.55rem}.pbr dd{grid-column:1}}
+.chip{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .7rem;border:1px solid var(--line-2);border-radius:999px;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--fg-2)}
+.chip.live{color:var(--pass);border-color:var(--pass-line)}
+.chip.live::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2.2s infinite}
+.chip.wait{color:var(--warn);border-color:var(--warn-line)}
+.who{display:inline-flex;align-items:center;padding:.22rem .55rem;border-radius:6px;border:1px solid var(--line-2);font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-2);white-space:nowrap}
+.who.gate{color:var(--warn);border-color:var(--warn-line)}
+.who.person{color:var(--ember-2);border-color:rgba(255,90,31,.5)}
+.who.ai{color:var(--violet);border-color:var(--violet-line)}
+.who.policy{color:var(--pass);border-color:var(--pass-line)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;color:var(--fg-2);font-size:.86rem;align-items:center}
+.legend>span{display:inline-flex;gap:.5rem;align-items:center}
+.exhibit{margin-top:clamp(3rem,6vw,5.5rem)}
+.ex-title{font-size:clamp(1.4rem,1rem + 1.2vw,2.1rem);font-weight:500;letter-spacing:-.03em;line-height:1.1}
+.ex-k{color:var(--fg-2);margin-bottom:.5rem}
+.panel{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:clamp(1.2rem,2.5vw,2rem);min-width:0}
+.panel-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.75rem}
+.panel-title{font-size:1.2rem;font-weight:500;letter-spacing:-.02em}
+.note{margin-top:1rem;color:var(--fg-3);font-size:.85rem}
+.cap{margin-top:.75rem;color:var(--fg-2);font-size:.88rem;max-width:70ch}
+.shot{width:100%;border-radius:14px;border:1px solid var(--line);background:var(--ink-3)}
+.media{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--ink-3)}
+.media img{width:100%;will-change:transform}
+.ex-2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;align-items:start}
+@media (max-width:900px){.ex-2{grid-template-columns:1fr}}
+
+/* journey */
+.journey{position:relative;background:var(--ink-2);border-block:1px solid var(--line);margin-top:clamp(3.5rem,7vw,6rem)}
+.journey-pin{padding-block:clamp(3rem,6vw,5rem);overflow:hidden}
+.journey-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem 2rem;margin-bottom:2.25rem}
+.journey-stage{position:relative}
+.journey-track{position:relative;padding-left:var(--gl);padding-right:var(--gr)}
+.j-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.j-rail,.j-token,.j-dot{display:none}
+.j-step{position:relative;background:var(--ink-3);border:1px solid var(--line);border-radius:18px;padding:1.35rem;display:flex;flex-direction:column;gap:.75rem;transition:border-color .5s,opacity .5s,transform .5s var(--ease)}
+.j-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.j-n{font-family:var(--f-mono);font-size:.78rem;color:var(--fg-2)}
+.j-step h5{font-size:1.45rem;font-weight:500;letter-spacing:-.03em;line-height:1.1}
+.j-step p{color:var(--fg-2);font-size:.95rem}
+.j-step .time{margin-top:auto;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.02em;color:var(--ember-2);padding-top:.8rem;border-top:1px dashed var(--line-2)}
+.j-end{background:var(--ember);border-color:var(--ember);color:var(--on-ember)}
+.j-end .j-n,.j-end p{color:var(--on-ember)}
+.j-end .big{font-size:clamp(2.6rem,2rem + 2vw,3.8rem);font-weight:500;letter-spacing:-.055em;line-height:.95}
+.j-end .time{color:var(--on-ember);border-top-color:rgba(22,9,4,.3)}
+@media (min-width:900px){
+  .motion .journey-pin{height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:calc(var(--nav-h) + .5rem) 1.5rem}
+  .motion .journey-track{width:max-content;padding-left:calc(var(--gl) + 20vw - 1.35rem - 6px);padding-right:40vw;padding-top:3.4rem;will-change:transform}
+  .motion .j-steps{display:flex;gap:1.25rem}
+  .motion .j-step{width:clamp(270px,24vw,340px);flex:none;min-height:clamp(290px,44vh,380px)}
+  .motion .j-rail{display:block;position:absolute;top:1.1rem;left:0;right:0;height:1px;background:var(--line-2)}
+  .motion .j-rail i{display:block;height:100%;width:0;background:var(--ember)}
+  .motion .j-dot{display:block;position:absolute;top:calc(-2.3rem - 6px);left:1.35rem;width:12px;height:12px;border-radius:50%;background:var(--ink-2);border:1px solid var(--fg-2);transition:background-color .4s,border-color .4s,box-shadow .4s}
+  .motion .j-step.on .j-dot{background:var(--ember);border-color:var(--ember);box-shadow:0 0 0 6px var(--ember-soft)}
+  .motion .journey.h .j-step:not(.on){opacity:.5;transform:translateY(10px)}
+  .motion .journey.h .j-step.cur:not(.j-end){border-color:rgba(255,90,31,.65);background:var(--ink-4)}
+  .motion .j-token{display:inline-flex;align-items:center;gap:.5rem;position:absolute;z-index:3;top:1.1rem;left:calc(var(--gl) + 20vw);transform:translate(-50%,-50%);padding:.45rem .8rem;border-radius:999px;background:var(--ember);color:var(--on-ember);box-shadow:0 0 0 6px var(--ink-2),0 0 40px var(--ember-soft);white-space:nowrap}
+  .motion .j-token::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--on-ember)}
+}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.46fr);gap:1rem;align-items:start;margin-top:clamp(2.5rem,5vw,4rem)}
+.vert video{width:100%;aspect-ratio:9/16;border-radius:14px;background:var(--black);border:1px solid var(--line)}
+@media (max-width:960px){.gallery{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.gallery .vert{grid-column:1/-1;max-width:300px}}
+@media (max-width:600px){.gallery{grid-template-columns:1fr}}
+
+/* tour */
+.tour{--pw:min(300px,28vw);--ph:calc(var(--pw) * 2.034);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(1rem,5vw,6rem);margin-top:clamp(3rem,6vw,5rem)}
+.tour-phone{position:sticky;top:calc(50vh - var(--ph) / 2 + 1rem);align-self:start;display:grid;justify-items:center;gap:1rem}
+.phone{position:relative;width:var(--pw);aspect-ratio:560/1139;border-radius:calc(var(--pw) * .14);border:calc(var(--pw) * .032) solid var(--black);box-shadow:0 0 0 1px var(--line-2),0 40px 80px -30px rgba(0,0,0,.85),0 0 140px -20px var(--ember-soft);overflow:hidden;background:var(--black)}
+.phone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity .6s var(--ease),transform 1s var(--ease)}
+.phone img.on{opacity:1;transform:scale(1)}
+.tour-count{color:var(--fg-2)}
+.tour-k{color:var(--fg-2);padding-top:1rem}
+.tour-steps li{min-height:62vh;display:flex;flex-direction:column;justify-content:center;gap:.6rem;color:var(--fg-3);transition:color .5s}
+.tour-steps li:first-child{min-height:48vh;justify-content:flex-start;padding-top:12vh}
+.tour-steps li.on{color:var(--fg)}
+.tour-steps .n{font-family:var(--f-mono);font-size:.75rem}
+.tour-steps b{font-size:clamp(1.5rem,1rem + 2.4vw,3.4rem);font-weight:500;letter-spacing:-.038em;line-height:1}
+.tour-steps .d{font-size:clamp(.98rem,.9rem + .3vw,1.2rem);max-width:34ch}
+.tour-steps li.on .d{color:var(--fg-2)}
+@media (max-width:760px){.tour{--pw:min(150px,36vw);grid-template-columns:auto minmax(0,1fr);gap:1.1rem}.tour-steps li{min-height:52vh}.tour-steps li:first-child{min-height:40vh;padding-top:6vh}}
+
+/* MSETCL */
+.bars{display:grid;gap:.85rem;margin-top:1.25rem}
+.bar-row{display:grid;grid-template-columns:8.5rem minmax(0,1fr) 2.6rem;gap:.9rem;align-items:center;font-size:.9rem}
+.bar-track{height:12px;background:var(--ink-4);border-radius:999px;overflow:hidden}
+.bar{display:block;height:100%;width:calc(var(--v) / 136 * 100%);background:var(--ember);border-radius:999px;transform-origin:left;transition:transform 1.3s var(--ease)}
+.bar.sec{background:var(--fg)}
+.motion .bars:not(.in) .bar{transform:scaleX(0)}
+.bar-row:nth-child(2) .bar{transition-delay:.06s}.bar-row:nth-child(3) .bar{transition-delay:.12s}.bar-row:nth-child(4) .bar{transition-delay:.18s}.bar-row:nth-child(5) .bar{transition-delay:.24s}.bar-row:nth-child(6) .bar{transition-delay:.3s}.bar-row:nth-child(7) .bar{transition-delay:.36s}
+.bar-val{font-family:var(--f-mono);font-size:.8rem;text-align:right}
+.key{display:inline-block;width:10px;height:10px;border-radius:3px}
+.flow{margin-top:.75rem}
+.flow li{display:grid;grid-template-columns:2rem minmax(0,1fr) auto;gap:.75rem;align-items:start;padding-block:.85rem;border-bottom:1px solid var(--line)}
+.flow li:last-child{border-bottom:0}
+.flow .n{font-family:var(--f-mono);font-size:.75rem;color:var(--fg-2);padding-top:.2rem}
+.flow b{font-weight:500;display:block}
+.flow p{color:var(--fg-2);font-size:.9rem;margin-top:.15rem}
+@media (max-width:420px){.bar-row{grid-template-columns:6.5rem minmax(0,1fr) 2.4rem;font-size:.82rem}}
+
+/* CA */
+.ca-ex{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem}
+.ca-ex .wide{grid-column:1/-1}
+.vid{position:relative;border-radius:16px;overflow:hidden;background:var(--black);aspect-ratio:16/9;border:1px solid var(--line)}
+.vid video{width:100%;height:100%;object-fit:cover}
+@media (max-width:700px){.ca-ex{grid-template-columns:1fr}}
+
+/* Pump */
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px}
+.seg button{min-height:38px;padding:.45rem .9rem;border-radius:999px;font-size:.86rem;transition:background-color .3s,color .3s}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--ink)}
+.lcd{display:flex;flex-direction:column;gap:.35rem;margin-top:1.25rem;padding:1rem 1.25rem;border-radius:12px;background:var(--lcd-bg);border:1px solid var(--lcd-line)}
+.lcd .lbl{font-family:var(--f-mono);font-size:.68rem;color:var(--lcd-lbl);text-transform:uppercase;letter-spacing:.08em}
+.lcd .digits{font-family:var(--f-mono);font-size:clamp(2rem,1.5rem + 2vw,3rem);color:var(--lcd-fg);letter-spacing:.08em;text-shadow:0 0 18px rgba(140,255,181,.35);line-height:1.1}
+.reads{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.75rem;margin-top:.75rem}
+.read{border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;display:grid;gap:.2rem}
+.read .k{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-2)}
+.read .v{font-family:var(--f-mono);font-size:1.25rem}
+.read.bad{border-color:var(--warn-line)}
+.read.bad .v{color:var(--warn)}
+.verdict{margin-top:.75rem;padding:.85rem 1rem;border-radius:12px;font-size:.95rem;border:1px solid}
+.verdict.ok{color:var(--pass);border-color:var(--pass-line);background:var(--pass-soft)}
+.verdict.no{color:var(--warn);border-color:var(--warn-line);background:var(--warn-soft)}
+.waffle{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:5px;margin-top:1.25rem;max-width:460px}
+.waffle i{aspect-ratio:1;border-radius:4px;background:var(--pass);transition:transform .5s var(--ease),opacity .5s;transition-delay:calc(var(--i) * 16ms)}
+.waffle i.rev{background:var(--warn)}
+.motion .waffle:not(.in) i{transform:scale(0);opacity:0}
+.split{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1.25rem}
+.split .big{display:block;font-size:2.3rem;font-weight:500;letter-spacing:-.045em;line-height:1}
+.split .ok .big{color:var(--pass)}
+.split .warn .big{color:var(--warn)}
+.split .lbl{color:var(--fg-2);font-size:.85rem}
+
+/* Outbound */
+.who-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+@media (max-width:1100px){.who-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.who-grid{grid-template-columns:1fr}}
+.wcard{display:flex;flex-direction:column;gap:.6rem;padding:1.25rem;border:1px solid var(--line);border-radius:16px;background:var(--ink-2);min-width:0}
+.wcard .top{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.wcard h5{font-size:1.15rem;font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.wcard p{color:var(--fg-2);font-size:.9rem}
+.wcard .time{font-family:var(--f-mono);font-size:.72rem;color:var(--ember-2);margin-top:auto;padding-top:.6rem;border-top:1px dashed var(--line-2)}
+.code{font-family:var(--f-mono);font-size:.85em}
+.rule{margin-top:clamp(2.5rem,5vw,4rem);font-size:clamp(1.8rem,1rem + 3vw,4.2rem);line-height:1.04;letter-spacing:-.04em;font-weight:500;max-width:19ch;text-wrap:balance}
+.rule em{color:var(--ember)}
+
+/* films */
+.films{position:relative;background:var(--film);padding-block:clamp(5rem,10vw,9rem);overflow:hidden}
+.films::before{content:"";position:absolute;width:80vw;height:80vw;left:50%;top:-34vw;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(255,90,31,.13),transparent);pointer-events:none}
+.films .wrap{position:relative}
+.cine{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:clamp(1.25rem,3vw,2.5rem)}
+@media (max-width:1000px){.cine{grid-template-columns:1fr}}
+.screen{position:relative;border-radius:18px;overflow:hidden;background:var(--black);aspect-ratio:16/9;box-shadow:0 50px 100px -40px rgba(0,0,0,.9),0 0 0 1px var(--line)}
+.screen video{width:100%;height:100%;background:var(--black)}
+.cc{position:absolute;left:0;right:0;bottom:3.6rem;display:flex;justify-content:center;pointer-events:none;padding-inline:1rem}
+.cc span{background:rgba(0,0,0,.8);color:var(--white);font-size:clamp(.85rem,.7rem + .6vw,1.15rem);line-height:1.35;padding:.3em .6em;border-radius:6px;max-width:44ch;text-align:center}
+.now{display:grid;gap:.5rem;margin-top:1.4rem}
+.now h3{font-size:clamp(1.6rem,1.1rem + 1.5vw,2.6rem);font-weight:500;letter-spacing:-.035em;line-height:1.05}
+.now p{color:var(--fg-2);max-width:70ch}
+.now .note{margin-top:0}
+.chapters{margin-top:1.5rem}
+.chapters .mono{color:var(--fg-2)}
+.chap-list{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.75rem}
+.chap{display:inline-flex;gap:.5rem;align-items:center;min-height:38px;padding:.45rem .85rem;border-radius:999px;border:1px solid var(--line);font-size:.86rem;color:var(--fg-2);transition:background-color .3s,border-color .3s,color .3s}
+.chap .ts{font-family:var(--f-mono);font-size:.72rem;color:var(--fg-3)}
+.chap:hover{border-color:var(--fg-2);color:var(--fg)}
+.chap.on{background:var(--ember);border-color:var(--ember);color:var(--on-ember)}
+.chap.on .ts{color:var(--on-ember)}
+.playlist{display:grid;gap:.75rem;align-content:start}
+.pl{display:grid;grid-template-columns:128px minmax(0,1fr);gap:.9rem;align-items:center;width:100%;padding:.6rem;border-radius:14px;border:1px solid var(--line);transition:border-color .3s,background-color .3s}
+.pl:hover{border-color:var(--line-2);background:var(--ink-2)}
+.pl[aria-current="true"]{border-color:var(--ember);background:rgba(255,90,31,.07)}
+.pl .th{position:relative;border-radius:9px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-3)}
+.pl .th img{width:100%;height:100%;object-fit:cover}
+.pl .dur{position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.78);color:var(--white);font-family:var(--f-mono);font-size:.66rem;padding:.12rem .4rem;border-radius:4px}
+.pl b{display:block;font-weight:500}
+.pl .d{display:block;color:var(--fg-2);font-size:.82rem;line-height:1.4;margin-top:.2rem}
+
+/* earlier */
+.earlier{padding-block:clamp(5rem,10vw,9rem) clamp(8rem,15vw,13rem)}
+.tl{border-top:1px solid var(--paper-line)}
+.tl li{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1.5rem;padding-block:1.8rem;border-bottom:1px solid var(--paper-line)}
+.tl .when{font-family:var(--f-mono);font-size:.8rem;color:var(--paper-2);padding-top:.5rem}
+.tl h3{font-size:clamp(1.35rem,1rem + 1.5vw,2.3rem);font-weight:500;letter-spacing:-.032em;line-height:1.1}
+.tl h3 span{display:block;color:var(--paper-2);font-weight:400;font-size:.62em;letter-spacing:-.01em;margin-top:.3rem}
+.tl p{margin-top:.7rem;color:var(--paper-2);max-width:70ch}
+@media (max-width:700px){.tl li{grid-template-columns:1fr;gap:.4rem}}
+
+/* contact */
+.contact{position:relative;background:var(--ink);padding-top:clamp(9rem,16vw,14rem);overflow:hidden}
+.curve{position:absolute;left:-6%;right:-6%;top:-1px;height:clamp(70px,11vw,170px);background:var(--paper);border-radius:0 0 50% 50%;transform-origin:top;z-index:1}
+.contact-in{position:relative;z-index:2}
+.contact h2{margin-top:1.5rem;font-size:clamp(2.7rem,1rem + 7vw,9rem);line-height:.92;letter-spacing:-.052em;font-weight:500;max-width:13ch;text-wrap:balance}
+.contact h2 em{color:var(--ember)}
+.contact .lead{margin-top:clamp(1.5rem,3vw,2.25rem)}
+.contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1.5rem,4vw,3.5rem);margin-top:clamp(3rem,6vw,5rem);padding-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--line)}
+.big-btn{width:clamp(150px,14vw,200px);aspect-ratio:1;border-radius:50%;background:var(--ember);color:var(--on-ember);display:grid;place-items:center;text-align:center;font-weight:600;font-size:1rem;flex:none;transition:background-color .4s}
+.big-btn:hover{background:var(--fg)}
+.contact-links{display:grid;gap:1.25rem;min-width:0}
+.contact-mail{font-family:var(--f-sans);font-style:normal;font-weight:500;font-size:clamp(1.45rem,1rem + 2.1vw,3rem);letter-spacing:-.035em;line-height:1.1;overflow-wrap:anywhere;-webkit-user-select:all;user-select:all}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem 1.5rem;margin-top:clamp(5rem,10vw,8rem);padding-block:2rem calc(2rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--fg-2)}
+
+@media (prefers-reduced-motion:reduce){
+  .grain,.live-dot,.chip.live::before{animation:none}
+  *,*::before,*::after{transition-duration:.01ms!important}
+}
+
+/* ===== Landing: one plain sentence, after jorgerieraflores.com ===== */
+:root{--f-cond:"Archivo","Geist",ui-sans-serif,system-ui,sans-serif;--f-hand:"Indie Flower","Geist",cursive}
+.hand{font-family:var(--f-hand);font-style:normal;text-transform:uppercase;letter-spacing:.06em;line-height:1.15;color:var(--fg)}
+.rh{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;background:#121212;overflow:hidden}
+.rh-in{position:relative;width:100%;max-width:1280px;margin:0 auto;padding:calc(var(--nav-h) + clamp(1rem,3vh,2rem) + env(safe-area-inset-top,0px)) var(--gr) clamp(1.5rem,4vh,3rem) var(--gl);display:flex;flex-direction:column;align-items:center;text-align:center}
+.rh-h{position:relative;width:100%;font-family:var(--f-cond);font-weight:800;font-stretch:75%;text-transform:uppercase;font-size:var(--hf);line-height:.86;letter-spacing:-.01em;color:#fff}
+.rh-h .ln,.rs-h .ln{position:relative;z-index:2;display:block;overflow:hidden;padding-bottom:.05em;margin-bottom:-.05em}
+.rh-h .ln>span,.rs-h .ln>span{display:block}
+.rh-h .ln{pointer-events:none}
+.rh-band{position:relative;z-index:1;display:block;width:100%;aspect-ratio:4.2/1;overflow:hidden;background:#000;cursor:pointer;border-radius:4px}
+.rh-band video{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.58);transform:scale(1.04);transition:filter .7s var(--ease)}
+.rh-band:hover video{filter:grayscale(0) contrast(1) brightness(.95)}
+.rh-grain{position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.9'/></svg>")}
+.rh-note{position:absolute;z-index:3;font-size:clamp(.95rem,.7rem + .5vw,1.25rem);color:#EDEBE6;pointer-events:none}
+.rh-arrow{position:absolute;width:5.2em;height:auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.n-a{left:max(var(--gl),3%);top:calc(var(--nav-h) + 3vh);transform:rotate(-4deg);text-align:left}
+.n-a .rh-arrow{left:100%;top:.4em;margin-left:.3em}
+.n-b{right:max(var(--gr),2%);top:63%;transform:rotate(3deg);text-align:left;padding-left:5.6em}
+.n-b .rh-arrow{left:0;top:-.6em;width:5em}
+.rh-sub{max-width:52ch;margin-top:clamp(1.4rem,3.5vh,2.5rem);font-size:clamp(1.02rem,.95rem + .35vw,1.25rem);line-height:1.5;color:var(--fg-2)}
+.rh-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.8rem 1.4rem;margin-top:1.6rem}
+.rh-btn{display:inline-flex;align-items:center;justify-content:center;min-width:14rem;padding:.85rem 1.6rem;border-radius:6px;background:#E8E6E1;color:#121212;font-weight:600;font-size:1rem;transition:background-color .3s,color .3s}
+.rh-btn:hover{background:var(--ember);color:var(--on-ember)}
+.rh-link{color:var(--fg-2);font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line-2);transition:color .25s}
+.rh-link:hover{color:var(--fg)}
+.rh-roles{margin-top:clamp(1.25rem,3vh,2.25rem);color:var(--fg-3);text-transform:none;letter-spacing:.02em}
+.rs{position:relative;display:flex;align-items:center;justify-content:center;min-height:86vh;min-height:86svh;background:#121212;padding:clamp(4rem,10vh,7rem) var(--gr) clamp(4rem,10vh,7rem) var(--gl)}
+.rs-in{position:relative;text-align:center}
+.rs-h{font-family:var(--f-cond);font-weight:800;font-stretch:75%;text-transform:uppercase;font-size:clamp(2.5rem,1rem + 5.2vw,6.6rem);line-height:.9;letter-spacing:-.01em;color:#fff}
+.rs-note{position:absolute;left:-.5em;top:-2.4em;transform:rotate(-6deg);font-size:clamp(.95rem,.7rem + .5vw,1.25rem);text-align:left;color:#EDEBE6}
+@media (max-width:760px){
+  .rh-note{display:none}
+  .rh-band{aspect-ratio:2.4/1}
+  .rh-strip{width:100%;margin:.22em 0 .26em}
+  .rs-note{position:static;display:block;margin-bottom:1.25rem;transform:none;text-align:center}
+  .rh-btn{min-width:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){.rh-band video{transform:none}}
+
+/* ===== Landing v9: timed reveal and a pinned crossfade, after jorgerieraflores.com ===== */
+.motion .scene{position:relative;height:100vh;height:100svh;overflow:hidden;background:#121212}
+.motion .scene .rh{position:absolute;inset:0;min-height:0}
+.motion .scene .rs{position:absolute;inset:0;min-height:0;z-index:2;visibility:hidden;border-top:1px solid rgba(255,255,255,.07);box-shadow:0 -40px 90px rgba(0,0,0,.6)}
+.ch{visibility:hidden}
+.ch.on{visibility:visible}
+@media (max-width:760px){.rh-more{display:none}}
+
+/* ===== Landing v11: headline and strip kept apart ===== */
+.rh-in{--hf:min(clamp(2.9rem,1.1rem + 6.2vw,7.6rem),9.2vh)}
+.n-a{left:auto;right:calc(50% + var(--hf) * 3.45 + 5.8em)}
+.n-b{right:auto;left:calc(50% + var(--hf) * 3.45 + .4em)}
+.rh-note{white-space:nowrap}
+@media (max-width:1000px){.rh-note{display:none}}
+.rh-strip{position:relative;z-index:1;display:block;width:min(100%,92vh);margin:.2em auto .24em}
+.rh-meta{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.7rem;font-family:var(--f-mono);font-size:.72rem;font-weight:400;font-stretch:100%;line-height:1.3;letter-spacing:.04em;text-transform:none;text-align:left;color:var(--fg-3)}
+.rh-tag{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.rh-tag b{font-weight:600;color:var(--fg)}
+.rh-meta .vid-toggle{position:static;flex:none;min-height:0;padding:.38rem .8rem;line-height:1;font-weight:400;text-transform:uppercase;background:transparent;border:1px solid var(--line-2);backdrop-filter:none;-webkit-backdrop-filter:none;transition:border-color .25s,color .25s}
+.rh-meta .vid-toggle:hover{border-color:var(--fg-2);color:var(--fg)}
+.rh-sub{margin-top:clamp(1rem,2.8vh,2.5rem)}
+.rh-cta{margin-top:clamp(1rem,2.2vh,1.6rem)}
+.rh-roles{margin-top:clamp(1rem,2.6vh,2.25rem)}
+</style>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121212'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23FF5A1F'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#121212">
+<link rel="canonical" href="https://neuralweavers.com/">
+<meta property="og:url" content="https://neuralweavers.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anubhav Khandelwal">
+<meta property="og:description" content="CEO &amp; Lead Engineer of Toorunt AI and Neural Weaver LLP. I sit with a business, find the problem worth solving, and ship the AI system that fixes it, tested end to end.">
+<meta property="og:image" content="https://neuralweavers.com/img/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>body{margin:0;background:#121212}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><div class="c-ring"><div class="c-ring-in"><em></em></div></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Anubhav Khandelwal</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#cases">Cases</a>
+      <a href="#films">Films</a>
+      <a href="#earlier">Earlier</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="nav-clock mono">Mumbai <span data-clock>--:--</span> IST</span>
+    <button type="button" class="menu-btn mono" id="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menu">
+    <ol>
+      <li><a href="#work"><span>01</span>Work</a></li>
+      <li><a href="#cases"><span>02</span>Case studies</a></li>
+      <li><a href="#films"><span>03</span>Films</a></li>
+      <li><a href="#earlier"><span>04</span>Earlier</a></li>
+      <li><a href="#contact"><span>05</span>Contact</a></li>
+    </ol>
+  </nav>
+  <div class="menu-foot mono"><span>Mumbai <span data-clock>--:--</span> IST</span><a href="https://www.linkedin.com/in/anubhav-khandelwal-834188175" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+</div>
+
+<main id="main">
+
+<!-- Landing: two screens on one pinned stage -->
+<div class="scene" id="scene">
+<section class="rh" id="top" aria-labelledby="hero-h">
+  <div class="rh-in">
+    <p class="rh-note n-a hand" aria-hidden="true">CEO by title,<br>engineer by habit<svg class="rh-arrow" viewBox="0 0 90 70" aria-hidden="true"><path d="M6 6 C 40 4, 70 22, 78 58"/><path d="M68 50 L78 60 L84 47"/></svg></p>
+    <h1 class="rh-h" id="hero-h" aria-label="From business problem to AI system in production.">
+      <span class="ln"><span>From business</span></span>
+      <span class="ln"><span>problem</span></span>
+      <span class="rh-strip" data-loop-scope>
+        <span class="rh-band" data-cursor="Films">
+          <video data-loop muted loop playsinline preload="auto" poster="img/strip-poster.jpg" aria-hidden="true"><source src="media/strip-reel.mp4" type="video/mp4"></video>
+          <span class="rh-grain" aria-hidden="true"></span>
+        </span>
+        <span class="rh-meta">
+          <span class="rh-tag" aria-hidden="true"><b id="rh-t">Toorunt AI</b><span class="rh-more"> · <span id="rh-d">Nothing ships without evidence</span></span></span>
+          <button type="button" class="vid-toggle rh-pause" data-toggle data-what="showreel">Pause</button>
+        </span>
+      </span>
+      <span class="ln"><span>to AI system</span></span>
+      <span class="ln"><span>in production.</span></span>
+    </h1>
+    <p class="rh-note n-b hand" aria-hidden="true"><svg class="rh-arrow" viewBox="0 0 110 60" aria-hidden="true"><path d="M104 8 C 80 6, 40 14, 12 44"/><path d="M10 30 L10 46 L25 46"/></svg>11,153 tests,<br>0 failed</p>
+    <p class="rh-sub" data-fade>I'm Anubhav. I sit with a business, find the problem worth solving, and ship the AI system that fixes it, tested end to end.</p>
+    <div class="rh-cta" data-fade>
+      <a class="rh-btn magnetic" href="#contact">Work with me</a>
+      <a class="rh-link" href="#films">or watch the films <span aria-hidden="true">↓</span></a>
+    </div>
+    <p class="rh-roles mono" data-fade>CEO &amp; Lead Engineer, Toorunt AI · Co-founder, CEO &amp; Lead Engineer, Neural Weaver LLP · Mumbai</p>
+  </div>
+</section>
+
+<!-- What I do, in one sentence -->
+<section class="rs" aria-label="What I do">
+  <div class="rs-in">
+    <p class="rs-note hand" aria-hidden="true">the job they call<br>forward-deployed</p>
+    <h2 class="rs-h"><span class="ln"><span>I sit with the client,</span></span><span class="ln"><span>find what's broken,</span></span><span class="ln"><span>and ship the fix.</span></span></h2>
+  </div>
+</section>
+</div>
+
+<!-- About -->
+<section class="about" id="about" aria-label="About">
+  <div class="wrap">
+    <p class="label mono">(01) About</p>
+    <p class="manifesto">I bring the <em>finance depth</em> to understand the problem and the <em>engineering depth</em> to ship the fix, and I have led each of my startups as both <em>CEO and lead engineer</em>.</p>
+    <div class="about-grid">
+      <div data-reveal>
+        <h2 class="mono">Now</h2>
+        <ul><li>Toorunt AI<span>CEO &amp; Lead Engineer</span></li><li>Neural Weaver LLP<span>Co-founder, CEO &amp; Lead Engineer</span></li></ul>
+      </div>
+      <div data-reveal>
+        <h2 class="mono">Before</h2>
+        <ul><li>Axis Bank<span>Senior Manager, Business Analytics</span></li><li>IIFL Capital<span>Assistant Vice President, Research Analyst</span></li><li>Heltar<span>LLM sales agent for Spinny</span></li></ul>
+      </div>
+      <div data-reveal>
+        <h2 class="mono">Education</h2>
+        <ul><li>IIT Kharagpur<span>B.Tech Biotechnology + M.Tech Financial Engineering</span></li><li>Codeforces Expert<span>Rated 1600+</span></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Numbers -->
+<section class="stats" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li data-reveal><a href="#msetcl"><span class="stat-k mono"><span>MSETCL</span><span aria-hidden="true">↘</span></span><span class="stat-n"><span data-count="347">347</span><small>/ 347</small></span><span class="stat-l">test cases passed at handover, state utility portal</span></a></li>
+      <li data-reveal><a href="#toorunt"><span class="stat-k mono"><span>Toorunt AI</span><span aria-hidden="true">↘</span></span><span class="stat-n"><span data-count="11153">11,153</span></span><span class="stat-l">tests passed, 0 failed, in Toorunt's release CI</span></a></li>
+      <li data-reveal><a href="#pump-ledger"><span class="stat-k mono"><span>Pump Ledger</span><span aria-hidden="true">↘</span></span><span class="stat-n">0<small>wrong</small></span><span class="stat-l">auto-accepted meter readings at a live fuel station</span></a></li>
+      <li data-reveal><a href="#navigoin"><span class="stat-k mono"><span>NaviGoIn</span><span aria-hidden="true">↘</span></span><span class="stat-n"><i class="live-dot" aria-hidden="true"></i>Public</span><span class="stat-l">Android release of a ride-hailing platform</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Work index -->
+<section class="work paper" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label mono">(02) Work</p>
+      <h2 class="h-xl" id="work-h" data-split>Thirteen projects, six told in full</h2>
+      <p class="lead" data-reveal>Pick a kind of work to narrow the list. Six rows open a full case study below, and three have a film you can watch on this page.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter work">
+      <button type="button" class="filter" data-filter="all" aria-pressed="true">All<span class="n">13</span></button>
+      <button type="button" class="filter" data-filter="ai" aria-pressed="false">AI systems<span class="n">6</span></button>
+      <button type="button" class="filter" data-filter="client" aria-pressed="false">Client delivery<span class="n">6</span></button>
+      <button type="button" class="filter" data-filter="finance" aria-pressed="false">Finance &amp; tax<span class="n">5</span></button>
+      <button type="button" class="filter" data-filter="tools" aria-pressed="false">Research &amp; tools<span class="n">3</span></button>
+      <span class="count mono" id="count" aria-live="polite">13 shown</span>
+    </div>
+    <ol class="rows" id="rows">
+      <li class="row" data-tags="ai" data-img="img/toorunt-work.jpg">
+        <a class="row-in" href="#toorunt">
+          <span class="r-n">01</span>
+          <span class="r-main"><span class="r-t">Toorunt AI</span><span class="r-d">An AI engineering team that ships a company's Jira backlog inside its own Jira and GitHub, with people signing off at three points.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Own startup</span><span class="r-tag">Case study</span><span class="r-tag">Film 4:07</span></span><span class="r-f">11,153 tests · 0 failed</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+      <li class="row" data-tags="client" data-img="img/navigoin-04-select-ride.jpg" data-tall>
+        <a class="row-in" href="#navigoin">
+          <span class="r-n">02</span>
+          <span class="r-main"><span class="r-t">NaviGoIn</span><span class="r-d">A full ride-hailing platform for a Mumbai start-up: rider app, driver app, fleet console and backend.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Client delivery</span><span class="r-tag">Case study</span></span><span class="r-f">574 Go + 249 browser tests</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+      <li class="row" data-tags="client">
+        <a class="row-in" href="#msetcl">
+          <span class="r-n">03</span>
+          <span class="r-main"><span class="r-t">MSETCL Innovation Portal</span><span class="r-d">A secure, bilingual innovation portal for Maharashtra's state electricity transmission company.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Client delivery</span><span class="r-tag">Case study</span></span><span class="r-f">347 / 347 test cases</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+      <li class="row" data-tags="ai finance" data-img="img/ca-thumb.jpg">
+        <a class="row-in" href="#ca-automation">
+          <span class="r-n">04</span>
+          <span class="r-main"><span class="r-t">CA Automation</span><span class="r-d">Software prepares the books and the compliance work for CA firms. The chartered accountant approves.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Own product</span><span class="r-tag">Case study</span><span class="r-tag">Film 4:46</span></span><span class="r-f">17 banks · 1,100+ tests</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+      <li class="row" data-tags="client finance">
+        <a class="row-in" href="#pump-ledger">
+          <span class="r-n">05</span>
+          <span class="r-main"><span class="r-t">Pump Ledger</span><span class="r-d">WhatsApp meter photos replace manual shift-end reconciliation at a working IndianOil fuel station.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Client delivery</span><span class="r-tag">Case study</span></span><span class="r-f">43 / 53 auto · 0 wrong</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+      <li class="row" data-tags="ai">
+        <a class="row-in" href="#outbound">
+          <span class="r-n">06</span>
+          <span class="r-main"><span class="r-t">Outbound</span><span class="r-d">An AI sales agent where models draft and judge, a person approves, and policy decides what may be sent.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Internal tool</span><span class="r-tag">Case study</span></span><span class="r-f">1,600+ tests</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+      <li class="row" data-tags="ai client" data-img="img/karigari-thumb.jpg">
+        <button type="button" class="row-in" data-play="karigari" data-cursor="Play">
+          <span class="r-n">07</span>
+          <span class="r-main"><span class="r-t">Karigari Procure</span><span class="r-d">Procurement for a 13-outlet restaurant group: par-level night orders, receiving against the PO, a 3-way rate, invoice and goods match, and a WhatsApp vendor portal. "Ask Karigari" answers questions over the data through read-only, row-capped SQL.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Pre-sales demo</span><span class="r-tag">Film 4:46</span></span><span class="r-f">SQL guard: 10 attacks blocked in tests</span></span>
+          <span class="r-go" aria-hidden="true">▶</span>
+        </button>
+      </li>
+      <li class="row" data-tags="ai finance tools">
+        <div class="row-in">
+          <span class="r-n">08</span>
+          <span class="r-main"><span class="r-t">The Market Sage</span><span class="r-d">Equity research over Indian company filings. Its research reviewer reads broker reports, stages cause-and-effect links, checks each with a blinded AI reviewer, and merges only what a person approves.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Own platform</span></span><span class="r-f">470,683 NSE filings · 499 companies</span></span>
+          <span class="r-go" aria-hidden="true"></span>
+        </div>
+      </li>
+      <li class="row" data-tags="finance client" data-img="img/ecom-thumb.jpg">
+        <button type="button" class="row-in" data-play="ecom" data-cursor="Play">
+          <span class="r-n">09</span>
+          <span class="r-main"><span class="r-t">E-commerce finance OS</span><span class="r-d">An Amazon SP-API client with settlement parsing, fee audit, marketplace claims (SAFE-T and FBA), a three-way purchase match, freight audit and balanced vouchers exported to Tally.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Pre-sales demo</span><span class="r-tag">Film 5:40</span></span><span class="r-f">Real SP-API client · 14 screens</span></span>
+          <span class="r-go" aria-hidden="true">▶</span>
+        </button>
+      </li>
+      <li class="row" data-tags="client" data-img="img/rollsking-thumb.jpg">
+        <button type="button" class="row-in" data-play="rollsking" data-cursor="Play">
+          <span class="r-n">10</span>
+          <span class="r-main"><span class="r-t">RollsKing platform pitch</span><span class="r-d">A pitch for a 130-outlet roll chain: base-kitchen batches, recipe usage checked against sales, Swiggy and Zomato payouts matched order by order, order timing, and new outlets set up from the nearest one.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Pre-sales pitch</span><span class="r-tag">Film 3:17</span></span><span class="r-f">130+ outlets · 15 cities in scope</span></span>
+          <span class="r-go" aria-hidden="true">▶</span>
+        </button>
+      </li>
+      <li class="row" data-tags="finance">
+        <div class="row-in">
+          <span class="r-n">11</span>
+          <span class="r-main"><span class="r-t">Pharma distribution ERP rebuild</span><span class="r-d">Reverse-engineered a Windows ERP that stored its data in shared DBF files, then rebuilt its daily core on a transactional server with the original screens and hot keys.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Legacy modernisation</span></span><span class="r-f">302 DBF tables mapped · 48 reports</span></span>
+          <span class="r-go" aria-hidden="true"></span>
+        </div>
+      </li>
+      <li class="row" data-tags="tools">
+        <div class="row-in">
+          <span class="r-n">12</span>
+          <span class="r-main"><span class="r-t">Delivery-signal study</span><span class="r-d">Six attention signals from NSE delivery data on large caps, tested walk-forward over 2016–2026. The extra filters did not beat the baseline out of sample, and the report says so.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Independent research</span></span><span class="r-f">2022+ out of sample: 20.3% a year · Sharpe 0.82</span></span>
+          <span class="r-go" aria-hidden="true"></span>
+        </div>
+      </li>
+      <li class="row" data-tags="ai tools" data-img="img/reel-poster.jpg">
+        <a class="row-in" href="#films">
+          <span class="r-n">13</span>
+          <span class="r-main"><span class="r-t">Film production toolkit</span><span class="r-d">Turns a brief into a finished product film: script, narration in English, Hindi or Marathi, motion graphics timed to the voice, an original score, captions, and loudness and accessibility checks.</span></span>
+          <span class="r-meta"><span class="r-k"><span>Tooling</span></span><span class="r-f">Made five of the films on this page</span></span>
+          <span class="r-go" aria-hidden="true">↘</span>
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div class="preview" id="preview" aria-hidden="true"><div class="preview-in"></div></div>
+</section>
+
+<!-- Case studies -->
+<section class="cases" id="cases" aria-labelledby="cases-h">
+  <div class="wrap cases-intro">
+    <div class="sec-head">
+      <p class="label mono">(03) Case studies</p>
+      <h2 class="h-xl" id="cases-h" data-split>Six systems, told in full</h2>
+      <p class="lead" data-reveal>Each one: the problem, what I built and the result, with the proof underneath.</p>
+    </div>
+  </div>
+
+  <!-- 1. Toorunt -->
+  <article class="case" id="toorunt" aria-labelledby="toorunt-h">
+    <div class="wrap">
+      <header class="case-head">
+        <div class="case-meta mono"><span class="idx">Case 01 / 06</span><span>Own startup · CEO &amp; Lead Engineer · 2026</span></div>
+        <h3 class="case-title" id="toorunt-h" data-split>Toorunt AI</h3>
+        <span class="case-num" aria-hidden="true">01</span>
+        <p class="case-dek" data-reveal>An AI engineering team that ships a company's Jira backlog inside its own Jira and GitHub, with people signing off at three points.</p>
+      </header>
+      <div class="case-grid">
+        <dl class="pbr">
+          <div data-reveal><dt class="mono">Problem</dt><dd>Most teams have more tickets than engineers. AI coding tools can write the code, but nobody can say who approved a change or prove it was tested before it shipped.</dd></div>
+          <div data-reveal><dt class="mono">What I built</dt>
+            <dd>A platform that takes each ticket from plan to release. People sign off only on the plan, the pull request and the merge. Every change clears 14 deterministic gates, each bot has its own least-privilege Jira and GitHub identity, review is bot-to-bot and adversarial, and every decision lands in a hash-chained audit log.</dd>
+            <dd>A contract compiler turns a signed PRD into acceptance tests, and each test must fail before any code is written. Builds run in distributed work packets with Redis leases and fencing tokens. Code is built in one place and judged in another: CodeBuild makes the image, and credential-less Fargate sandboxes verify it.</dd>
+          </div>
+          <div data-reveal><dt class="mono">Result</dt><dd>A ticket on a demo codebase went from intake to deployed release in <strong>2 h 51 min</strong>. Release CI passed <strong>11,153 tests with 0 failures</strong>. A staging run of 4 work packets on 3 workers reached <strong>100% first-pass success</strong>.</dd></div>
+        </dl>
+        <aside class="case-side" aria-label="Toorunt AI details">
+          <div class="side-block"><p class="mono">Role</p><p>CEO &amp; Lead Engineer. Architected the platform and led a team of four other engineers.</p></div>
+          <div class="side-block"><p class="mono">Stack</p><p>Python, FastAPI, React/TypeScript, Redis, Postgres, AWS (ECS Fargate, CodeBuild, Aurora, S3), OpenTelemetry</p></div>
+          <ul class="ledger">
+            <li><span class="k">Release CI</span><span class="v">11,153 passed · 0 failed</span></li>
+            <li><span class="k">Gates per change</span><span class="v">14 deterministic</span></li>
+            <li><span class="k">Human sign-offs</span><span class="v">3: plan, PR, merge</span></li>
+            <li><span class="k">Pricing model</span><span class="v">$150 per merged PR</span></li>
+          </ul>
+          <div class="actions"><button type="button" class="btn primary magnetic" data-play="toorunt" data-at="0"><span class="tri" aria-hidden="true"></span>Watch the film · 4:07</button><a class="btn magnetic" href="https://toorunt.ai" target="_blank" rel="noopener">toorunt.ai <span class="arr" aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="journey" id="journey">
+      <div class="journey-pin">
+        <div class="wrap journey-head">
+          <div><p class="mono ex-k">Follow ticket KIRA-24</p><h4 class="ex-title">One ticket, intake to release</h4></div>
+          <div class="legend"><span><span class="who bot">Bot</span>works</span><span><span class="who gate">Gate</span>checks</span><span><span class="who person">Person signs</span>decides</span></div>
+        </div>
+        <div class="journey-stage">
+          <span class="j-token mono" aria-hidden="true">KIRA-24</span>
+          <div class="journey-track">
+            <div class="j-rail" aria-hidden="true"><i></i></div>
+            <ol class="j-steps">
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">01</span><span class="who bot">Bot</span></div><h5>Intake</h5><p>A ticket lands in the customer's own Jira. A bot with its own least-privilege identity picks it up.</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">02</span><span class="who person">Person signs</span></div><h5>Plan</h5><p>A planning bot writes the plan. A person signs it off. Sign-off 1 of 3.</p><p class="time">KIRA-24: intake to plan in 21 min 41 s</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">03</span><span class="who gate">Gate</span></div><h5>Contract</h5><p>The signed PRD compiles into acceptance tests. Every test must fail before any code is written, and passes only on the exact candidate revision.</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">04</span><span class="who bot">Bot</span></div><h5>Build</h5><p>Work splits into packets that run on distributed workers, with Redis leases, fencing tokens and work stealing. CodeBuild makes the image.</p><p class="time">KIRA-24: plan approval to pull request in 1 h 31 min</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">05</span><span class="who gate">Gate</span></div><h5>Verify</h5><p>Credential-less Fargate sandboxes judge what was built, separately from where it was built. The change has to clear 14 deterministic gates.</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">06</span><span class="who person">Person signs</span></div><h5>Review</h5><p>A separate bot reviews the pull request adversarially. Then a person approves it. Sign-off 2 of 3.</p><p class="time">KIRA-24: pull request to peer approval in 9 min 27 s</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">07</span><span class="who person">Person signs</span></div><h5>Merge</h5><p>A person approves the merge. Sign-off 3 of 3. Organisation policy can pin these approvals so a team can only tighten them.</p></li>
+              <li class="j-step"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">08</span><span class="who bot">Bot</span></div><h5>Release and watch</h5><p>The release ships and is watched after merge. Every decision on the way is written to a hash-chained audit log.</p></li>
+              <li class="j-step j-end"><span class="j-dot" aria-hidden="true"></span><div class="j-top"><span class="j-n">Released</span></div><p class="big">2 h 51 min</p><p>From intake to deployed release for KIRA-24, on a demo codebase.</p><p class="time">Release CI: 11,153 passed · 0 failed</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="gallery">
+        <figure data-reveal>
+          <div class="media"><img data-parallax src="img/toorunt-policy.jpg" width="1600" height="1000" alt="Toorunt policy console listing guardrail switches, with plan approval and PR approval marked as required and pinned by the organisation." loading="lazy"></div>
+          <figcaption class="cap">The policy console: 68 guardrail switches. Plan and PR approval are pinned by the organisation, and a team can only tighten them. Test-mode data.</figcaption>
+        </figure>
+        <figure data-reveal>
+          <div class="media"><img data-parallax src="img/toorunt-work.jpg" width="1600" height="1000" alt="Toorunt work board: KIRA tickets waiting at intake, with columns for plan, implement, review, merge, deploy and watch." loading="lazy"></div>
+          <figcaption class="cap">The work board: every ticket's stage, who holds it and what it has cost. Test-mode data.</figcaption>
+        </figure>
+        <figure class="vert" data-reveal>
+          <video controls playsinline preload="none" poster="img/toorunt-teaser.jpg" aria-label="Toorunt AI launch teaser, 15 seconds">
+            <source src="media/toorunt-teaser.mp4" type="video/mp4">
+          </video>
+          <figcaption class="cap">Launch teaser for social, 15 s, vertical. Sound on.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2. NaviGoIn -->
+  <article class="case" id="navigoin" aria-labelledby="navigoin-h">
+    <div class="wrap">
+      <header class="case-head">
+        <div class="case-meta mono"><span class="idx">Case 02 / 06</span><span>Client delivery · Technical Lead · Jul–Nov 2026</span><span class="chip live">Public Android release</span></div>
+        <h3 class="case-title" id="navigoin-h" data-split>NaviGoIn</h3>
+        <span class="case-num" aria-hidden="true">02</span>
+        <p class="case-dek" data-reveal>A full ride-hailing platform for a Mumbai start-up: rider app, driver app, fleet console and backend.</p>
+      </header>
+      <div class="case-grid">
+        <dl class="pbr">
+          <div data-reveal><dt class="mono">Problem</dt><dd>The founders had a 75-page functional spec and no engineering team.</dd></div>
+          <div data-reveal><dt class="mono">What I built</dt>
+            <dd>Rider and driver apps, a fleet-admin console and a Go API covering fares, surge pricing, dispatch, pooling, auto-rickshaw and bike-taxi classes, Razorpay payments, KYC and SOS.</dd>
+            <dd>Money is checked on the server. A captured payment must equal the final fare before it attaches to exactly one trip. CI runs gitleaks, govulncheck, gosec and Trivy on every change.</dd>
+          </div>
+          <div data-reveal><dt class="mono">Result</dt><dd>Handed over an acceptance and penetration-testing package in September, then moved production to the client's own AWS account in November. The Android app is publicly downloadable. The code is covered by <strong>574 Go tests</strong> and <strong>249 browser tests</strong>.</dd></div>
+        </dl>
+        <aside class="case-side" aria-label="NaviGoIn details">
+          <div class="side-block"><p class="mono">Role</p><p>Won the engagement under a milestone-based MOU and led it as Technical Lead.</p></div>
+          <div class="side-block"><p class="mono">Stack</p><p>Go, PostgreSQL, Redis, React with Capacitor, AWS (EC2, RDS, S3, CloudFront)</p></div>
+          <ul class="ledger">
+            <li><span class="k">Go tests</span><span class="v">574</span></li>
+            <li><span class="k">Browser tests</span><span class="v">249</span></li>
+            <li><span class="k">Spec</span><span class="v">75-page FRS</span></li>
+            <li><span class="k">Download</span><span class="v"><a href="https://get.navigoin.com" target="_blank" rel="noopener">get.navigoin.com</a></span></li>
+          </ul>
+          <div class="actions"><a class="btn primary magnetic" href="https://get.navigoin.com" target="_blank" rel="noopener">Get the Android app <span class="arr" aria-hidden="true">↗</span></a><a class="btn magnetic" href="https://navigoin.com" target="_blank" rel="noopener">navigoin.com <span class="arr" aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+
+      <div class="tour" id="tour">
+        <div class="tour-phone">
+          <div class="phone">
+            <img class="on" src="img/navigoin-02-home.jpg" width="560" height="1139" alt="Rider app home screen with a Where to? search and ride options.">
+            <img src="img/navigoin-04-select-ride.jpg" width="560" height="1139" alt="Choosing a ride: Mini, Sedan and SUV with fares to Mumbai International Airport." loading="lazy">
+            <img src="img/navigoin-05-finding.jpg" width="560" height="1140" alt="Finding your driver: matching with the nearest drivers, with the estimated fare." loading="lazy">
+            <img src="img/navigoin-06-trip-assigned.jpg" width="560" height="1139" alt="Driver on the way, with vehicle details, ride OTP and a safety toolkit." loading="lazy">
+            <img src="img/navigoin-09-on-trip.jpg" width="560" height="1140" alt="On the trip: turn-by-turn route to Terminal 2 with 24 minutes remaining." loading="lazy">
+            <img src="img/navigoin-08-sos.jpg" width="560" height="1140" alt="SOS screen with a button to call emergency services on 112." loading="lazy">
+            <img src="img/navigoin-11-receipt.jpg" width="560" height="1140" alt="Ride invoice with trip, payment method, distance and fare breakdown." loading="lazy">
+            <img src="img/navigoin-14-safety.jpg" width="560" height="1140" alt="Safety centre: trusted contacts, emergency settings, plate-then-OTP check and number masking." loading="lazy">
+          </div>
+          <p class="tour-count mono" id="tour-count" aria-hidden="true">1 / 8</p>
+        </div>
+        <div>
+          <p class="mono tour-k">A ride, start to finish. Scroll through it. Rider app in demo mode, where rides are simulated.</p>
+          <ol class="tour-steps">
+            <li><span class="n">01</span><b>Home</b><span class="d">Search a destination, pick saved places, see ride classes.</span></li>
+            <li><span class="n">02</span><b>Choose a ride</b><span class="d">A fare for each class, worked out on the server.</span></li>
+            <li><span class="n">03</span><b>Find a driver</b><span class="d">Dispatch matches the rider with the nearest drivers.</span></li>
+            <li><span class="n">04</span><b>Driver assigned</b><span class="d">Vehicle and driver details, the ride OTP and the safety toolkit.</span></li>
+            <li><span class="n">05</span><b>On the trip</b><span class="d">Live route and time remaining.</span></li>
+            <li><span class="n">06</span><b>SOS</b><span class="d">One tap to call 112 from the ride.</span></li>
+            <li><span class="n">07</span><b>Receipt</b><span class="d">Fare breakdown. The captured payment must equal the final fare.</span></li>
+            <li><span class="n">08</span><b>Safety centre</b><span class="d">Trusted contacts, check the plate then the OTP, and the rider's number stays private.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3. MSETCL -->
+  <article class="case" id="msetcl" aria-labelledby="msetcl-h">
+    <div class="wrap">
+      <header class="case-head">
+        <div class="case-meta mono"><span class="idx">Case 03 / 06</span><span>Client delivery · via Creant Technology · Oct 2026</span><span class="chip">Delivered for client review</span></div>
+        <h3 class="case-title" id="msetcl-h" data-split>MSETCL Innovation Portal</h3>
+        <span class="case-num" aria-hidden="true">03</span>
+        <p class="case-dek" data-reveal>A secure, bilingual innovation portal for Maharashtra's state electricity transmission company.</p>
+      </header>
+      <div class="case-grid">
+        <dl class="pbr">
+          <div data-reveal><dt class="mono">Problem</dt><dd>MSETCL wanted employees to submit ideas and committees to evaluate them fairly, in Marathi and English, on Liferay DXP and to a written SRS with government-grade security.</dd></div>
+          <div data-reveal><dt class="mono">What I built</dt>
+            <dd>Three custom Liferay modules: two-factor sign-in, idea submission, two-stage blind committee scoring, MIS reports and a hash-chained audit trail. Every upload is scanned by ClamAV and re-rendered through Gotenberg before anyone opens it.</dd>
+            <dd>The build targets OWASP ASVS Level 2 and India's DPDP Act 2023.</dd>
+          </div>
+          <div data-reveal><dt class="mono">Result</dt><dd>Delivered with <strong>347 of 347 test cases passing</strong>, 136 of them security attacks. Load test: <strong>94 requests a second with 0 errors</strong> and a 0.10 s dashboard p95. A restore drill rebuilt 264 documents. The handover included a 45-page delivery report.</dd></div>
+        </dl>
+        <aside class="case-side" aria-label="MSETCL details">
+          <div class="side-block"><p class="mono">Role</p><p>Brought in through a partnership with Creant Technology; led delivery end to end.</p></div>
+          <div class="side-block"><p class="mono">Stack</p><p>Liferay DXP (OSGi, Service Builder), Java 21, PostgreSQL 16, Docker, ClamAV, Gotenberg</p></div>
+          <ul class="ledger">
+            <li><span class="k">Test cases</span><span class="v">347 / 347 passed</span></li>
+            <li><span class="k">Load test</span><span class="v">94 req/s · 0 errors</span></li>
+            <li><span class="k">Dashboard p95</span><span class="v">0.10 s</span></li>
+            <li><span class="k">Delivery report</span><span class="v">45 pages</span></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="exhibit ex-2">
+        <div class="panel" data-reveal>
+          <p class="panel-title">347 test cases, all passing</p>
+          <div class="bars" role="img" aria-label="Test cases by suite: security 136, feature 69, UI audit 42, unit 39, end-to-end 31, smoke 23, security overlay 7.">
+            <div class="bar-row"><span>Security attacks</span><span class="bar-track"><span class="bar sec" style="--v:136"></span></span><span class="bar-val">136</span></div>
+            <div class="bar-row"><span>Feature</span><span class="bar-track"><span class="bar" style="--v:69"></span></span><span class="bar-val">69</span></div>
+            <div class="bar-row"><span>UI audit</span><span class="bar-track"><span class="bar" style="--v:42"></span></span><span class="bar-val">42</span></div>
+            <div class="bar-row"><span>Unit</span><span class="bar-track"><span class="bar" style="--v:39"></span></span><span class="bar-val">39</span></div>
+            <div class="bar-row"><span>End-to-end</span><span class="bar-track"><span class="bar" style="--v:31"></span></span><span class="bar-val">31</span></div>
+            <div class="bar-row"><span>Smoke</span><span class="bar-track"><span class="bar" style="--v:23"></span></span><span class="bar-val">23</span></div>
+            <div class="bar-row"><span>Security overlay</span><span class="bar-track"><span class="bar sec" style="--v:7"></span></span><span class="bar-val">7</span></div>
+          </div>
+          <div class="legend" style="margin-top:1.25rem"><span><i class="key" style="background:var(--fg)"></i>Security suites</span><span><i class="key" style="background:var(--ember)"></i>Functional suites</span></div>
+          <p class="note">Test cases by suite, from the delivery test workbook.</p>
+        </div>
+        <div class="panel" data-reveal>
+          <p class="panel-title">How an idea moves</p>
+          <ol class="flow">
+            <li><span class="n">01</span><div><b>Sign in</b><p>Employees sign in with a second factor and use the portal in Marathi or English.</p></div><span class="who person">Employee</span></li>
+            <li><span class="n">02</span><div><b>Submit the idea</b><p>The idea and its attachments are submitted through the portal.</p></div><span class="who person">Employee</span></li>
+            <li><span class="n">03</span><div><b>Scan every upload</b><p>ClamAV scans every uploaded file.</p></div><span class="who gate">Check</span></li>
+            <li><span class="n">04</span><div><b>Re-render documents</b><p>Gotenberg re-renders each document, so reviewers open a clean copy instead of the original upload.</p></div><span class="who gate">Check</span></li>
+            <li><span class="n">05</span><div><b>Blind scoring</b><p>Committee members score each idea without seeing who submitted it.</p></div><span class="who person">Committee</span></li>
+            <li><span class="n">06</span><div><b>Second stage</b><p>Scoring runs in two stages before an idea is ranked.</p></div><span class="who person">Committee</span></li>
+            <li><span class="n">07</span><div><b>Ranking and MIS</b><p>Rankings and MIS reports come from the recorded scores.</p></div><span class="who bot">System</span></li>
+            <li><span class="n">08</span><div><b>Audit trail</b><p>Every action is written to a hash-chained audit trail that can be verified end to end.</p></div><span class="who bot">System</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4. CA Automation -->
+  <article class="case" id="ca-automation" aria-labelledby="ca-h">
+    <div class="wrap">
+      <header class="case-head">
+        <div class="case-meta mono"><span class="idx">Case 04 / 06</span><span>Own product · Neural Weaver LLP · Oct 2026 – now</span><span class="chip wait">In testing at a practising CA firm</span></div>
+        <h3 class="case-title" id="ca-h" data-split>CA Automation</h3>
+        <span class="case-num" aria-hidden="true">04</span>
+        <p class="case-dek" data-reveal>Software prepares the books and the compliance work. The chartered accountant approves.</p>
+      </header>
+      <div class="case-grid">
+        <dl class="pbr">
+          <div data-reveal><dt class="mono">Problem</dt><dd>At month-end, CA firm staff re-key bank statements and bills into Tally by hand, then reconcile GST and TDS line by line. It is slow, and a missed item becomes a penalty.</dd></div>
+          <div data-reveal><dt class="mono">What I built</dt>
+            <dd>Statements from 17 Indian banks become draft vouchers, including scanned and password-protected PDFs. Client rules decide first and an LLM second, OCR is checked against running balances, and every correction becomes a rule, so a mistake is fixed once. Staff see only the exceptions.</dd>
+            <dd>Approved entries go to Tally through an idempotent XML push. The same review-first flow covers GST returns and 2B matching, TDS under the old and 2025 Acts, capital gains, PF/ESI and MSME 45-day dues, behind an append-only audit trail and period locks.</dd>
+          </div>
+          <div data-reveal><dt class="mono">Result</dt><dd>Scoped from recorded Tally walkthroughs and a competitor teardown, now in testing at a practising CA firm, with <strong>1,100+ automated tests</strong>.</dd></div>
+        </dl>
+        <aside class="case-side" aria-label="CA Automation details">
+          <div class="side-block"><p class="mono">Role</p><p>CEO &amp; Lead Engineer. Ran discovery with the firm and built the product.</p></div>
+          <div class="side-block"><p class="mono">Stack</p><p>FastAPI, SQLAlchemy, React/TypeScript, Tally XML over HTTP</p></div>
+          <ul class="ledger">
+            <li><span class="k">Bank formats</span><span class="v">17 Indian banks</span></li>
+            <li><span class="k">Automated tests</span><span class="v">1,100+</span></li>
+            <li><span class="k">Tally push</span><span class="v">Idempotent XML/HTTP</span></li>
+            <li><span class="k">Product film</span><span class="v">4:46</span></li>
+          </ul>
+          <div class="actions">
+            <button type="button" class="btn primary magnetic" data-play="ca" data-at="0"><span class="tri" aria-hidden="true"></span>Watch the film · 4:46</button>
+            <button type="button" class="btn magnetic" data-play="ca" data-at="50">Jump to bank statements</button>
+          </div>
+        </aside>
+      </div>
+      <div class="exhibit ca-ex">
+        <figure class="wide" data-reveal>
+          <div class="vid" data-cursor="Muted">
+            <video data-loop muted loop playsinline preload="metadata" poster="img/clip-ca-bank.jpg" aria-label="Clip from the CA Automation film: a scanned bank statement becomes ledger entries, each matched to a party.">
+              <source src="media/clip-ca-bank.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="vid-toggle" data-toggle data-what="clip">Pause</button>
+          </div>
+          <figcaption class="cap">A scanned statement becomes ready entries, each matched to a party and the bill it settles. 10 s from the film, muted.</figcaption>
+        </figure>
+        <figure data-reveal>
+          <div class="media"><img data-parallax src="img/ca-review-bank.jpg" width="1600" height="900" alt="CA Automation review screen: a bank payment with a suggested ledger, the reason for the suggestion, and the source statement with balances tying out." loading="lazy"></div>
+          <figcaption class="cap">The review queue shows only the lines that need a person. Each suggestion says why it was made, and balances tie out on every row of the source statement. Demo company.</figcaption>
+        </figure>
+        <figure data-reveal>
+          <div class="media"><img data-parallax src="img/ca-gst-recon.jpg" width="1600" height="900" alt="CA Automation GST screen: supplier invoices matched against GSTR-2B and IMS, with counts for matched, value differs, on portal but not in books, and in books but not on portal, and the credit going into GSTR-3B." loading="lazy"></div>
+          <figcaption class="cap">Supplier invoices matched against GSTR-2B and IMS. Each mismatch says what to do next, and the credit going into GSTR-3B is worked out. Demo company.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5. Pump Ledger -->
+  <article class="case" id="pump-ledger" aria-labelledby="pump-h">
+    <div class="wrap">
+      <header class="case-head">
+        <div class="case-meta mono"><span class="idx">Case 05 / 06</span><span>Client delivery · Heera Associates, IndianOil dealer, Dombivli</span><span class="chip live">Live since 2 Oct 2026</span></div>
+        <h3 class="case-title" id="pump-h" data-split>Pump Ledger</h3>
+        <span class="case-num" aria-hidden="true">05</span>
+        <p class="case-dek" data-reveal>WhatsApp meter photos replace manual shift-end reconciliation at a working fuel station.</p>
+      </header>
+      <div class="case-grid">
+        <dl class="pbr">
+          <div data-reveal><dt class="mono">Problem</dt><dd>Pump staff already sent meter photos on WhatsApp at every shift change. The owner still matched fuel sold against cash, UPI and credit by hand, and shortages surfaced days late.</dd></div>
+          <div data-reveal><dt class="mono">What I built</dt>
+            <dd>A custom offline reader for the dot-matrix displays on fuel dispensers. Each photo is read twice by independent methods, and a reading is accepted automatically only when both agree. Everything else goes to a review queue.</dd>
+            <dd>A Hindi/English staff app, a daily owner digest that flags cash shortages and stock variances, and TallyPrime export. Nothing touches the dispenser hardware, in line with oil-company rules, and data handling follows the DPDP Act.</dd>
+          </div>
+          <div data-reveal><dt class="mono">Result</dt><dd>On a 53-reading benchmark, <strong>81% were accepted automatically with zero wrong</strong>. The owner has run it on real data since 2 October 2026.</dd></div>
+        </dl>
+        <aside class="case-side" aria-label="Pump Ledger details">
+          <div class="side-block"><p class="mono">Role</p><p>Brought on the launch customer and built the system.</p></div>
+          <div class="side-block"><p class="mono">Stack</p><p>Next.js, TypeScript, Postgres job queue, WhatsApp</p></div>
+          <ul class="ledger">
+            <li><span class="k">Auto-accepted</span><span class="v">43 / 53 (81%)</span></li>
+            <li><span class="k">Wrong accepts</span><span class="v">0</span></li>
+            <li><span class="k">In production</span><span class="v">since 2 Oct 2026</span></li>
+            <li><span class="k">Automated tests</span><span class="v">136</span></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="exhibit ex-2">
+        <div class="panel" data-reveal>
+          <div class="panel-row"><p class="panel-title">Two reads must agree</p>
+            <div class="seg" role="group" aria-label="Choose an example">
+              <button type="button" data-case="agree" aria-pressed="true">Reads agree</button>
+              <button type="button" data-case="differ" aria-pressed="false">Reads differ</button>
+            </div>
+          </div>
+          <div class="lcd" aria-hidden="true"><span class="lbl">Dispenser display</span><span class="digits" id="lcd-digits">01234.56</span></div>
+          <div class="reads">
+            <div class="read"><span class="k">Read A</span><span class="v" id="read-a">1234.56</span></div>
+            <div class="read" id="read-b-box"><span class="k">Read B</span><span class="v" id="read-b">1234.56</span></div>
+          </div>
+          <div class="verdict ok" id="verdict" aria-live="polite">Both reads agree. Posted to the ledger automatically.</div>
+          <p class="note">Illustration with made-up values. The rule is the real one: no agreement, no automatic posting.</p>
+        </div>
+        <div class="panel" data-reveal>
+          <p class="panel-title">Benchmark: 53 readings, one square each</p>
+          <div class="waffle" id="waffle" role="img" aria-label="43 readings accepted automatically, 10 sent to review, 0 accepted wrongly."></div>
+          <div class="split">
+            <div class="ok"><span class="big">43</span><span class="lbl">accepted automatically</span></div>
+            <div class="warn"><span class="big">10</span><span class="lbl">sent to a person</span></div>
+            <div><span class="big">0</span><span class="lbl">accepted wrongly</span></div>
+          </div>
+          <p class="note">13 real photos and 40 synthetic readings.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6. Outbound -->
+  <article class="case" id="outbound" aria-labelledby="outbound-h">
+    <div class="wrap">
+      <header class="case-head">
+        <div class="case-meta mono"><span class="idx">Case 06 / 06</span><span>Internal tool · Neural Weaver LLP · Nov 2026</span><span class="chip wait">Dry run before launch</span></div>
+        <h3 class="case-title" id="outbound-h" data-split>Outbound</h3>
+        <span class="case-num" aria-hidden="true">06</span>
+        <p class="case-dek" data-reveal>An AI sales agent where models draft and judge, a person approves, and policy decides what may be sent.</p>
+      </header>
+      <div class="case-grid">
+        <dl class="pbr">
+          <div data-reveal><dt class="mono">Problem</dt><dd>A young firm needs outbound sales at near-zero cost, without breaking anti-spam or privacy law in any country it writes to.</dd></div>
+          <div data-reveal><dt class="mono">What I built</dt>
+            <dd>An agent that finds companies in open map data, reads their websites, scores them and drafts an email. One Claude model drafts and a different model judges each draft, then a person approves it. Every send passes a single policy gate with country rules for the US, Canada, the UK, the EU, Australia and India, a consent ledger and a suppression list.</dd>
+            <dd>The AI may stop contact with someone on its own but can never start it. Sending runs through an exactly-once outbox, my own RFC 3464 bounce parser, RFC 8058 one-click unsubscribe and deliverability circuit breakers.</dd>
+          </div>
+          <div data-reveal><dt class="mono">Result</dt><dd>On the first run, open listing data found a contact address for <strong>342 of 515</strong> companies, against <strong>50 of 116</strong> from websites alone. More than <strong>1,600 automated tests</strong> cover the system ahead of launch.</dd></div>
+        </dl>
+        <aside class="case-side" aria-label="Outbound details">
+          <div class="side-block"><p class="mono">Role</p><p>Designed and built it.</p></div>
+          <div class="side-block"><p class="mono">Stack</p><p>Python, Django, PostgreSQL, DuckDB, Anthropic API (Message Batches), Cloudflare Workers</p></div>
+          <ul class="ledger">
+            <li><span class="k">Contacts found</span><span class="v">342 / 515 companies</span></li>
+            <li><span class="k">Automated tests</span><span class="v">1,600+</span></li>
+            <li><span class="k">Send gate</span><span class="v">one can_send() check</span></li>
+            <li><span class="k">Email standards</span><span class="v">RFC 3464 · RFC 8058</span></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="exhibit">
+        <div class="journey-head" style="margin-bottom:1.5rem">
+          <div><p class="mono ex-k">Who decides at each step</p><h4 class="ex-title">From a map listing to a sent email</h4></div>
+          <div class="legend"><span><span class="who">Automated</span></span><span><span class="who ai">AI</span></span><span><span class="who person">Person</span></span><span><span class="who policy">Policy</span></span></div>
+        </div>
+        <ol class="who-grid">
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">01</span><span class="who">Automated</span></div><h5>Find companies</h5><p>A weekly finder searches open-licence map data (Overture Maps Places).</p><p class="time">First run: contacts for 342 of 515 companies from listings, 50 of 116 from websites alone</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">02</span><span class="who">Automated</span></div><h5>Read the website</h5><p>It reads each company's own site. Contact data taken from LinkedIn is refused.</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">03</span><span class="who">Automated</span></div><h5>Score fit and size</h5><p>Each company is scored for fit and size before any email is drafted.</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">04</span><span class="who ai">AI</span></div><h5>Draft the email</h5><p>Claude Opus drafts each email through the Message Batches API.</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">05</span><span class="who ai">AI</span></div><h5>Judge the draft</h5><p>A different model, Claude Sonnet, judges the draft as a QA gate. The model that writes never grades its own work.</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">06</span><span class="who person">Person</span></div><h5>Approve or reject</h5><p>A person approves the email before anything can be sent.</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">07</span><span class="who policy">Policy</span></div><h5>Check the law</h5><p>One <span class="code">can_send()</span> gate applies country rules for the US, Canada, the UK, EU states, Australia and India (DPDP), a consent ledger with ISO/IEC TS 27560 fields, and keyed-hash suppression.</p></li>
+          <li class="wcard" data-reveal><div class="top"><span class="j-n">08</span><span class="who">Automated</span></div><h5>Send once, then listen</h5><p>An exactly-once outbox sends through Gmail, Graph or SMTP. Bounces go through my own RFC 3464 parser, unsubscribes through RFC 8058 one-click links on a Cloudflare Worker, and circuit breakers stop sending if deliverability drops.</p></li>
+        </ol>
+        <p class="rule" data-reveal>The AI can stop contact on its own. <em>Only a person can start it.</em></p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Screening room -->
+<section class="films" id="films" aria-labelledby="films-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label mono">(04) Screening room</p>
+      <h2 class="h-xl" id="films-h" data-split>Product films</h2>
+      <p class="lead" data-reveal>I write and produce short films that explain a product to the people who will buy it: script, voice, motion graphics and real product screens. Pick a film, then jump to any chapter.</p>
+    </div>
+    <div class="cine">
+      <div class="cine-main">
+        <div class="screen">
+          <video id="cine" controls playsinline preload="none" poster="img/toorunt-film-thumb.jpg" aria-label="Product film player">
+            <source src="media/film-toorunt.mp4" type="video/mp4">
+          </video>
+          <div class="cc" id="cc" aria-hidden="true" hidden><span hidden></span></div>
+        </div>
+        <div class="now">
+          <h3 id="cine-title">Toorunt AI</h3>
+          <p id="cine-desc">An autonomous AI engineering team that takes a ticket from plan to production: 14 gates, three decisions kept by people, and on call after launch.</p>
+          <p class="note" id="cine-note">Product walkthrough on real product screens with test-mode data.</p>
+          <div><button type="button" class="chap" id="cc-btn" aria-pressed="true">Captions on</button></div>
+        </div>
+        <div class="chapters">
+          <p class="mono" id="chap-label">Chapters</p>
+          <ol class="chap-list" id="chapters" aria-labelledby="chap-label"></ol>
+        </div>
+      </div>
+      <ul class="playlist" aria-label="Films">
+        <li><button type="button" class="pl" data-film="toorunt" aria-current="true">
+          <span class="th"><img src="img/toorunt-film-thumb.jpg" width="1200" height="675" alt="" loading="lazy"><span class="dur">4:07</span></span>
+          <span><b>Toorunt AI</b><span class="d">An AI engineering team that takes a ticket from plan to production, with 14 gates and three human decisions.</span></span>
+        </button></li>
+        <li><button type="button" class="pl" data-film="ca" aria-current="false">
+          <span class="th"><img src="img/ca-thumb.jpg" width="1200" height="675" alt="" loading="lazy"><span class="dur">4:46</span></span>
+          <span><b>CA Automation</b><span class="d">Month-end work for CA firms, prepared by software and approved by the CA.</span></span>
+        </button></li>
+        <li><button type="button" class="pl" data-film="karigari" aria-current="false">
+          <span class="th"><img src="img/karigari-thumb.jpg" width="1200" height="675" alt="" loading="lazy"><span class="dur">4:46</span></span>
+          <span><b>Restaurant Solution: Karigari</b><span class="d">A restaurant group's buying matched from order to bill, then the rest of the business on the same data.</span></span>
+        </button></li>
+        <li><button type="button" class="pl" data-film="ecom" aria-current="false">
+          <span class="th"><img src="img/ecom-thumb.jpg" width="1200" height="675" alt="" loading="lazy"><span class="dur">5:40</span></span>
+          <span><b>E-commerce operating system</b><span class="d">One ledger across marketplaces, couriers, ads and Tally, so a seller sees where money leaks.</span></span>
+        </button></li>
+        <li><button type="button" class="pl" data-film="skinaa" aria-current="false">
+          <span class="th"><img src="img/skinaa-thumb.jpg" width="1200" height="675" alt="" loading="lazy"><span class="dur">3:10</span></span>
+          <span><b>E-commerce Solution</b><span class="d">A skincare brand's Amazon and quick-commerce money, traced from order to bank to books.</span></span>
+        </button></li>
+        <li><button type="button" class="pl" data-film="rollsking" aria-current="false">
+          <span class="th"><img src="img/rollsking-thumb.jpg" width="1200" height="675" alt="" loading="lazy"><span class="dur">3:17</span></span>
+          <span><b>QSR Solution: Rolls King</b><span class="d">One platform for a roll chain, from the base kitchen to the last bite.</span></span>
+        </button></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Earlier -->
+<section class="earlier paper" id="earlier" aria-labelledby="earlier-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label mono">(05) Before my startups</p>
+      <h2 class="h-xl" id="earlier-h" data-split>Earlier</h2>
+    </div>
+    <ol class="tl">
+      <li data-reveal><span class="when">May–Jul 2026</span><div><h3>IIFL Capital<span>Assistant Vice President, Research Analyst</span></h3><p>Institutional equity research.</p></div></li>
+      <li data-reveal><span class="when">2023–2026</span><div><h3>Axis Bank<span>Senior Manager, Business Analytics</span></h3><p>Promoted on the fast track. Owned analytics for a Rs 70,000+ Cr portfolio. Built a CIBIL-trigger pipeline that turned live bureau enquiries into frontline leads (Rs 2,000+ Cr in new sanctions) and a straight-through renewal workflow that cut renewal turnaround by 75%.</p></div></li>
+      <li data-reveal><span class="when">2023–2024</span><div><h3>Heltar<span>WhatsApp sales agent for Spinny</span></h3><p>An LLM agent with tool calling and controlled context routing handled 10,000+ leads. Test drives rose from about 5 to 100+ a day, and prompt compaction cut the cost per test drive from Rs 200 to Rs 90.</p></div></li>
+      <li data-reveal><span class="when">2018–2023</span><div><h3>IIT Kharagpur<span>B.Tech Biotechnology + M.Tech Financial Engineering</span></h3><p>Dual degree. Codeforces Expert (1600+). First place at the Inter-IIT Social and Cultural Meet 2019 with the IIT Kharagpur contingent.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="curve" aria-hidden="true"></div>
+  <div class="wrap contact-in">
+    <p class="label mono">(06) Contact</p>
+    <h2 id="contact-h" data-reveal>Have a problem that needs to <em>reach production?</em></h2>
+    <p class="lead" data-reveal>I'm looking for forward-deployed and applied-AI engineering roles where the job is to understand a customer's business and ship the system that fixes it.</p>
+    <div class="contact-row">
+      <button type="button" class="big-btn magnetic" data-mag=".45" data-copy="anubhav022700@gmail.com" data-target="contact-mail"><span data-copy-label>Copy email</span></button>
+      <div class="contact-links">
+        <span class="contact-mail" id="contact-mail">anubhav022700@gmail.com</span>
+        <div class="actions">
+          <a class="btn magnetic" href="https://www.linkedin.com/in/anubhav-khandelwal-834188175" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>
+          <a class="btn" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </div>
+    <footer class="foot mono">
+      <span>Anubhav Khandelwal · Mumbai</span>
+      <span>Local time <span data-clock>--:--</span> IST</span>
+      <span>Updated November 2026</span>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  var d = document, html = d.documentElement;
+  function $(s, c) { return (c || d).querySelector(s); }
+  function $$(s, c) { return Array.prototype.slice.call((c || d).querySelectorAll(s)); }
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var G = window.gsap, ST = window.ScrollTrigger;
+  var motion = !!(G && ST) && !reduce;
+  html.classList.add('js');
+  if (motion) { G.registerPlugin(ST); html.classList.add('motion'); }
+  else html.classList.remove('is-loading');
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* Mumbai clock */
+  (function () {
+    var f; try { f = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false }); } catch (e) { return; }
+    var els = $$('[data-clock]');
+    function t() { var s = f.format(new Date()); els.forEach(function (e) { e.textContent = s; }); }
+    t(); setInterval(t, 15000);
+  })();
+
+  /* Copy buttons, with a select-the-text fallback */
+  $$('[data-copy]').forEach(function (b) {
+    var lab = $('[data-copy-label]', b) || b, orig = lab.textContent, timer;
+    function show(msg) { lab.textContent = msg; clearTimeout(timer); timer = setTimeout(function () { lab.textContent = orig; }, 1800); }
+    function fail() {
+      var t = d.getElementById(b.getAttribute('data-target') || '');
+      if (t) { try { var r = d.createRange(); r.selectNodeContents(t); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {} }
+      show('Address selected');
+    }
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-copy');
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(function () { show('Copied'); }, fail);
+        else fail();
+      } catch (e) { fail(); }
+    });
+  });
+
+  /* Smooth scroll */
+  var lenis = null;
+  if (motion && window.Lenis) {
+    try {
+      lenis = new window.Lenis({ lerp: 0.1, smoothWheel: true });
+      lenis.on('scroll', ST.update);
+      G.ticker.add(function (t) { lenis.raf(t * 1000); });
+      G.ticker.lagSmoothing(0);
+    } catch (e) { lenis = null; }
+  }
+  function goTo(el) {
+    if (lenis) { lenis.scrollTo(el === 0 ? 0 : el, { duration: 1.4 }); return; }
+    if (el === 0) window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    else el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  /* Nav, menu and progress */
+  var nav = $('#nav'), prog = $('#prog'), menuBtn = $('#menu-btn'), menu = $('#menu'), menuOpen = false;
+  function setMenu(o) {
+    if (o === menuOpen) return;
+    menuOpen = o; menu.hidden = !o;
+    menuBtn.setAttribute('aria-expanded', String(o)); menuBtn.textContent = o ? 'Close' : 'Menu';
+    html.classList.toggle('menu-open', o);
+    if (lenis) { if (o) lenis.stop(); else lenis.start(); }
+    if (o) {
+      nav.classList.remove('hide');
+      if (motion) G.fromTo($$('#menu li'), { yPercent: 60, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.8, stagger: 0.05, ease: 'expo.out' });
+      var first = $('#menu a'); if (first) first.focus();
+    }
+  }
+  menuBtn.addEventListener('click', function () { setMenu(!menuOpen); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menuOpen) { setMenu(false); menuBtn.focus(); } });
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var t = id === 'top' || !id ? 0 : d.getElementById(id);
+    if (t === null) return;
+    e.preventDefault(); setMenu(false); goTo(t);
+    if (t && t.focus) { if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1'); try { t.focus({ preventScroll: true }); } catch (err) {} }
+  });
+  var lastY = window.scrollY, ticking = false;
+  function navUpdate() {
+    ticking = false;
+    var y = window.scrollY, max = html.scrollHeight - window.innerHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+    if (!menuOpen) {
+      if (y > lastY + 4 && y > window.innerHeight * 0.5) nav.classList.add('hide');
+      else if (y < lastY - 4) nav.classList.remove('hide');
+    }
+    lastY = y;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(navUpdate); } }, { passive: true });
+  d.addEventListener('focusin', function (e) { if (nav.contains(e.target)) nav.classList.remove('hide'); });
+
+  /* Cursor follower (mouse only) */
+  var cursor = $('#cursor');
+  if (fine && !reduce && cursor) {
+    html.classList.add('has-cursor');
+    var ring = $('.c-ring', cursor), clab = $('em', cursor), mx = -200, my = -200, rx = -200, ry = -200, craf = 0;
+    var cloop = function () {
+      rx += (mx - rx) * 0.2; ry += (my - ry) * 0.2;
+      ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+      craf = (Math.abs(mx - rx) > 0.1 || Math.abs(my - ry) > 0.1) ? requestAnimationFrame(cloop) : 0;
+    };
+    d.addEventListener('pointermove', function (e) {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      mx = e.clientX; my = e.clientY;
+      if (!cursor.classList.contains('on')) { rx = mx; ry = my; cursor.classList.add('on'); }
+      if (!craf) craf = requestAnimationFrame(cloop);
+    }, { passive: true });
+    html.addEventListener('pointerleave', function () { cursor.classList.remove('on'); });
+    d.addEventListener('pointerover', function (e) {
+      var t = e.target.closest && e.target.closest('[data-cursor],a,button');
+      if (t && t.hasAttribute('data-cursor')) { cursor.classList.add('is-label'); cursor.classList.remove('is-link'); clab.textContent = t.getAttribute('data-cursor'); }
+      else if (t) { cursor.classList.add('is-link'); cursor.classList.remove('is-label'); }
+      else cursor.classList.remove('is-link', 'is-label');
+    });
+  }
+
+  /* Magnetic buttons */
+  if (motion && fine) {
+    $$('.magnetic').forEach(function (el) {
+      var s = parseFloat(el.getAttribute('data-mag') || '0.28');
+      var xTo = G.quickTo(el, 'x', { duration: 0.6, ease: 'power3.out' }), yTo = G.quickTo(el, 'y', { duration: 0.6, ease: 'power3.out' });
+      el.addEventListener('pointermove', function (e) { var r = el.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * s); yTo((e.clientY - r.top - r.height / 2) * s); });
+      el.addEventListener('pointerleave', function () { xTo(0); yTo(0); });
+    });
+  }
+
+  /* Looping muted clips: play in view, respect a viewer's pause, never autoplay with reduced motion */
+  $$('video[data-loop]').forEach(function (v) {
+    var holder = v.closest('[data-loop-scope]') || v.parentNode, btn = $('[data-toggle]', holder), userPaused = reduce;
+    function label() { if (!btn) return; btn.textContent = v.paused ? 'Play' : 'Pause'; btn.setAttribute('aria-label', (v.paused ? 'Play ' : 'Pause ') + (btn.getAttribute('data-what') || 'video')); }
+    if (btn) btn.addEventListener('click', function (e) { e.stopPropagation(); if (v.paused) { userPaused = false; var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { userPaused = true; v.pause(); } });
+    v.addEventListener('play', label); v.addEventListener('pause', label);
+    if (hasIO) new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting && !userPaused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else if (!en.isIntersecting) v.pause(); }); }, { threshold: 0.15 }).observe(v);
+    label();
+  });
+  /* Hero: the screening room. The showreel plays on a tilted screen that lights the room, and the caption follows its cuts. */
+  var Screen = (function () {
+    var hero = $('#top'), rig = $('.b-rig'), vid = $('.b-vid'), amb = $('.b-amb'), scr = $('.b-screen'), pbtn = $('.b-pause');
+    if (!hero || !rig || !vid) return { enter: function () {} };
+    var actx = null; try { actx = amb.getContext('2d'); } catch (e) {}
+    var tc = $('.b-hud .tc'), segs = $$('.b-segs b'), title = $('#b-title'), desc = $('#b-desc');
+    var CH = [[0, 3, 'Toorunt AI', 'Every change clears 14 gates'], [3, 6, 'CA Automation', 'A bank statement becomes ready entries'], [6, 9, 'Karigari', 'One bill line, checked before it is paid'], [9, 12, 'E-commerce OS', 'A marketplace fee leak, caught and disputed'], [12, 15, 'Skinaa Finance OS', 'Every Amazon fee, recalculated'], [15, 18, 'RollsKing', 'One recipe, one right amount']];
+    var entered = !motion, rx = reduce ? 0 : (motion ? 58 : 10), ry = 0, sc = 1, mxT = 0, myT = 0, raf = 0, running = false, inView = true, userPaused = reduce, cur = -1;
+    function pad(n) { return ('0' + Math.floor(n)).slice(-2); }
+    function apply() { rig.style.setProperty('--rx', rx.toFixed(2) + 'deg'); rig.style.setProperty('--ry', ry.toFixed(2) + 'deg'); rig.style.setProperty('--s', sc.toFixed(4)); }
+    function glow() { if (actx && vid.readyState >= 2) { try { actx.drawImage(vid, 0, 0, amb.width, amb.height); } catch (e) { actx = null; } } }
+    function caption() {
+      var t = vid.currentTime || 0, idx = 0;
+      if (tc) tc.textContent = '00:' + pad(t) + ' / 00:18';
+      for (var i = 0; i < CH.length; i++) if (t >= CH[i][0]) idx = i;
+      segs.forEach(function (b, i) { var c = CH[i], p = i < idx ? 1 : i > idx ? 0 : (t - c[0]) / (c[1] - c[0]); b.style.transform = 'scaleX(' + Math.max(0, Math.min(1, p)).toFixed(3) + ')'; });
+      if (idx !== cur) { cur = idx; title.textContent = CH[idx][2]; desc.textContent = CH[idx][3]; }
+    }
+    function tick() {
+      if (!running) return;
+      var p = Math.max(0, Math.min(1, window.scrollY / Math.max(1, hero.offsetHeight * 0.75)));
+      var trx = entered ? (10 - myT * 8) * (1 - p) : 58, tryy = entered ? mxT * 9 * (1 - p) : 0, ts = 1 + 0.06 * p;
+      rx += (trx - rx) * 0.075; ry += (tryy - ry) * 0.075; sc += (ts - sc) * 0.12;
+      apply(); glow();
+      raf = requestAnimationFrame(tick);
+    }
+    function startTick() { if (running || reduce) return; running = true; raf = requestAnimationFrame(tick); }
+    function stopTick() { running = false; cancelAnimationFrame(raf); }
+    function play() { if (userPaused) return; var pr = vid.play(); if (pr && pr.catch) pr.catch(function () {}); }
+    function label() { pbtn.textContent = vid.paused ? 'Play' : 'Pause'; pbtn.setAttribute('aria-label', (vid.paused ? 'Play' : 'Pause') + ' showreel'); }
+    vid.addEventListener('timeupdate', function () { caption(); if (reduce) glow(); });
+    vid.addEventListener('loadeddata', function () { caption(); glow(); });
+    vid.addEventListener('play', label); vid.addEventListener('pause', label);
+    pbtn.addEventListener('click', function (e) { e.stopPropagation(); if (vid.paused) { userPaused = false; play(); } else { userPaused = true; vid.pause(); } });
+    scr.addEventListener('click', function (e) { if (e.target.closest('button')) return; goTo($('#films')); });
+    if (fine && !reduce) hero.addEventListener('pointermove', function (e) { mxT = e.clientX / window.innerWidth - 0.5; myT = e.clientY / window.innerHeight - 0.5; }, { passive: true });
+    hero.addEventListener('pointerleave', function () { mxT = 0; myT = 0; });
+    apply(); label(); caption();
+    if (hasIO) new IntersectionObserver(function (es) { inView = es[0].isIntersecting; if (inView && !d.hidden) { play(); startTick(); } else { vid.pause(); stopTick(); } }, { threshold: 0.02 }).observe(hero);
+    else { play(); startTick(); }
+    d.addEventListener('visibilitychange', function () { if (d.hidden) { vid.pause(); stopTick(); } else if (inView) { play(); startTick(); } });
+    return { enter: function () { entered = true; } };
+  })();
+
+  /* The strip names each piece of work as it plays */
+  (function () {
+    var v = $('.rh-band video'), t = $('#rh-t'), dd = $('#rh-d'); if (!v || !t) return;
+    var CH = [[0, 'Toorunt AI', 'Nothing ships without evidence'], [2.6, 'Toorunt AI', 'Every change clears 14 gates'], [5.2, 'CA Automation', 'A bank statement becomes ledger entries'], [7.8, 'NaviGoIn', 'A ride-hailing platform, public on Android'], [10.4, 'Restaurant Solution: Karigari', 'Each bill line checked before it is paid'], [13, 'E-commerce OS', 'Every marketplace fee recalculated'], [15.6, 'QSR Solution: Rolls King', 'Every order timed, outlet by outlet']];
+    var cur = -1;
+    v.addEventListener('timeupdate', function () {
+      var x = v.currentTime, k = 0;
+      for (var i = 0; i < CH.length; i++) if (x >= CH[i][0]) k = i;
+      if (k !== cur) { cur = k; t.textContent = CH[k][1]; dd.textContent = CH[k][2]; }
+    });
+  })();
+
+  var band = $('.rh-band');
+  if (band) band.addEventListener('click', function () { goTo($('#films')); });
+
+  /* NaviGoIn: the phone follows the steps as you scroll */
+  var tour = $('#tour');
+  if (tour) {
+    var timgs = $$('.phone img', tour), tsteps = $$('.tour-steps li', tour), tcount = $('#tour-count');
+    var setT = function (n) {
+      if (n < 0) return;
+      timgs.forEach(function (im, k) { im.classList.toggle('on', k === n); });
+      tsteps.forEach(function (s, k) { s.classList.toggle('on', k === n); if (k === n) s.setAttribute('aria-current', 'step'); else s.removeAttribute('aria-current'); });
+      if (tcount) tcount.textContent = (n + 1) + ' / ' + tsteps.length;
+    };
+    setT(0);
+    if (hasIO) { var tio = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) setT(tsteps.indexOf(en.target)); }); }, { rootMargin: '-48% 0px -48% 0px' }); tsteps.forEach(function (s) { tio.observe(s); }); }
+  }
+
+  /* Pump Ledger: waffle and the two-read rule */
+  var wf = $('#waffle');
+  if (wf) for (var wi = 0; wi < 53; wi++) { var sq = d.createElement('i'); if (wi >= 43) sq.className = 'rev'; sq.style.setProperty('--i', wi); wf.appendChild(sq); }
+  var CASES = {
+    agree: { lcd: '01234.56', a: '1234.56', b: '1234.56', ok: true, msg: 'Both reads agree. Posted to the ledger automatically.' },
+    differ: { lcd: '01234.56', a: '1234.56', b: '1284.56', ok: false, msg: 'The reads differ. Nothing is posted; the photo goes to a person to check.' }
+  };
+  $$('.seg [data-case]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var c = CASES[b.getAttribute('data-case')];
+      $$('.seg [data-case]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      $('#lcd-digits').textContent = c.lcd; $('#read-a').textContent = c.a; $('#read-b').textContent = c.b;
+      $('#read-b-box').classList.toggle('bad', !c.ok);
+      var v = $('#verdict'); v.textContent = c.msg; v.className = 'verdict ' + (c.ok ? 'ok' : 'no');
+    });
+  });
+  $$('.bars,.waffle').forEach(function (el) {
+    if (!hasIO) { el.classList.add('in'); return; }
+    var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { el.classList.add('in'); io.disconnect(); } }, { threshold: 0.3 });
+    io.observe(el);
+  });
+
+  /* Work index: filters and the floating preview */
+  var filters = $$('.filter'), rows = $$('.row'), count = $('#count');
+  filters.forEach(function (f) {
+    f.addEventListener('click', function () {
+      var tag = f.getAttribute('data-filter'), n = 0;
+      filters.forEach(function (x) { x.setAttribute('aria-pressed', String(x === f)); });
+      rows.forEach(function (r) { var show = tag === 'all' || (' ' + r.getAttribute('data-tags') + ' ').indexOf(' ' + tag + ' ') > -1; r.hidden = !show; if (show) n++; });
+      count.textContent = n + ' shown';
+      if (motion) ST.refresh();
+    });
+  });
+  if (fine && !reduce) {
+    var pv = $('#preview'), pin = $('.preview-in', pv), cards = [];
+    rows.forEach(function (r) {
+      var c = d.createElement('div'); c.className = 'pv';
+      var src = r.getAttribute('data-img');
+      if (src) { c.setAttribute('data-src', src); if (r.hasAttribute('data-tall')) c.classList.add('tall'); }
+      else {
+        c.innerHTML = '<div class="pv-txt"><span class="mono"></span><b></b></div>';
+        $('.mono', c).textContent = $('.r-k > span', r).textContent;
+        $('b', c).textContent = $('.r-f', r).textContent;
+      }
+      pin.appendChild(c); cards.push(c);
+    });
+    var px = 0, py = 0, cx2 = 0, cy2 = 0, pon = false, praf = 0;
+    var ploop = function () {
+      var dx = px - cx2, dy = py - cy2; cx2 += dx * 0.15; cy2 += dy * 0.15;
+      pv.style.transform = 'translate3d(' + cx2.toFixed(1) + 'px,' + cy2.toFixed(1) + 'px,0)';
+      pin.style.setProperty('--rot', Math.max(-9, Math.min(9, dx * 0.08)).toFixed(2) + 'deg');
+      praf = (pon || Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) ? requestAnimationFrame(ploop) : 0;
+    };
+    rows.forEach(function (r, idx) {
+      r.addEventListener('pointerenter', function (e) {
+        if (e.pointerType && e.pointerType !== 'mouse') return;
+        var c = cards[idx];
+        if (c.hasAttribute('data-src') && !c.firstChild) { var im = d.createElement('img'); im.alt = ''; im.src = c.getAttribute('data-src'); c.appendChild(im); }
+        cards.forEach(function (k, z) { k.classList.toggle('on', z === idx); });
+        if (!pon && !pv.classList.contains('on')) { cx2 = px = e.clientX; cy2 = py = e.clientY; }
+        pon = true; pv.classList.add('on'); if (!praf) praf = requestAnimationFrame(ploop);
+      });
+      r.addEventListener('pointerleave', function () { pon = false; pv.classList.remove('on'); });
+    });
+    $('#rows').addEventListener('pointermove', function (e) { px = e.clientX; py = e.clientY; }, { passive: true });
+  }
+
+  /* Screening room. Captions are drawn by the page so they work on any host. */
+  var CUES = {"ecom":[[1.32,3.54,"Your brand sells on six channels."],[3.61,6.27,"Your numbers live in twelve different tools."],[6.34,11.29,"And on any given Monday, nobody can tell you how much you actually made last week."],[11.42,13.51,"Not because your team isn't working."],[13.57,15.88,"Because nothing talks to anything else."],[16.62,19.68,"Here's what a growing e-commerce brand runs on today."],[19.75,23.65,"Marketplaces like Amazon, Flipkart, Myntra and Nykaa."],[23.72,26.89,"Quick commerce on Blinkit, Zepto and Instamart."],[26.95,30.78,"Your own website, with a payment gateway and cash on delivery."],[30.85,32.73,"Couriers. Warehouses."],[32.79,35.36,"Manufacturers and packaging suppliers."],[35.42,37.93,"Ads on Meta, Google and Amazon."],[38.0,40.77,"And a CA who closes the books in Tally."],[40.83,45.75,"Every one of them sends its own report, in its own format, on its own schedule."],[45.82,48.28,"So money leaks in the gaps between them."],[48.35,51.9,"Industry estimates put it at one to three percent of revenue."],[55.37,59.32,"Neural Weavers builds the system that sits across all of it."],[59.39,63.3,"One ledger for every order, every rupee and every channel."],[63.37,66.06,"Connected to the tools you already use."],[67.12,69.05,"Chapter one: money in."],[69.12,73.85,"Every marketplace payout is matched to the orders inside it, line by line,"],[73.92,75.26,"and then to your bank."],[75.33,79.81,"Reserves and holds are tracked too, so you know exactly when the cash will land."],[79.88,84.91,"Every payment-gateway settlement and every cash-on-delivery remittance is checked"],[84.98,87.44,"against what the customer actually paid."],[87.5,91.28,"For quick commerce, every purchase order is followed through receipt,"],[91.35,95.25,"debit notes and payment, thirty to forty-five days later."],[95.32,98.53,"Short payments surface the same week, not at year-end."],[99.54,101.48,"Chapter two: the leaks."],[101.54,104.9,"Marketplace fees are recalculated from the rate card,"],[104.97,109.98,"so wrong weight slabs and wrong categories become ready-to-file disputes."],[110.05,115.05,"One wrong weight slab on one bestseller can quietly cost thousands every month."],[115.11,118.67,"Damaged, missing and wrong-item returns become claims,"],[118.74,120.57,"tracked against their deadlines."],[120.63,124.27,"Courier bills are checked shipment by shipment, for weight, zone,"],[124.33,126.38,"fuel surcharge and duplicates."],[126.44,131.25,"Supplier invoices are matched three ways, to the purchase order and to what actually"],[131.32,132.26,"arrived."],[132.32,137.08,"And every deduction a platform takes needs a reason, or it gets disputed."],[137.92,140.62,"Chapter three: orders and customers."],[140.69,144.65,"One order view across every channel, from checkout to doorstep."],[144.72,148.69,"On cash on delivery, up to one order in four can come back."],[148.75,154.22,"So COD orders get a WhatsApp confirmation and an address check before they ship."],[154.29,157.02,"Failed deliveries are followed up automatically,"],[157.09,159.1,"before the courier sends them home."],[159.17,164.28,"Customers get order updates on WhatsApp, and returns and exchanges run through a"],[164.34,166.12,"simple self-serve flow."],[166.18,171.6,"And every return reason is captured, so you fix the product, not just the refund."],[172.72,175.07,"Chapter four: stock and supply."],[175.14,180.41,"One inventory across your warehouses, marketplace warehouses and dark stores."],[180.48,183.71,"Shipments sent to marketplace warehouses are counted in,"],[183.78,185.97,"and every missing unit is claimed."],[186.04,190.65,"Reorder points from real sales, so bestsellers don't run out and slow stock"],[190.71,191.93,"doesn't pile up."],[191.99,196.44,"Batches and expiry tracked, so older stock goes where it can still sell."],[196.51,200.17,"Purchase orders to manufacturers, landed cost per batch,"],[200.24,202.48,"and small vendors paid on time."],[203.32,205.73,"Chapter five: profit and growth."],[205.8,210.23,"True profit for every product on every channel, after fees, freight,"],[210.3,211.89,"returns and ads."],[211.96,215.81,"Ad spend from Meta, Google, Amazon and quick commerce,"],[215.88,218.26,"tied to the orders it actually brought in."],[218.32,222.6,"And pricing guardrails, so a sale never sells at a loss by accident."],[222.67,225.84,"So you can see where the next rupee of growth should go."],[226.72,228.92,"Chapter six: books and tax."],[228.99,233.13,"Balanced journal entries flow into Tally or Zoho every day."],[233.2,236.0,"GST credits are matched against the portal,"],[236.07,240.28,"and the TCS and TDS that platforms deduct are tracked,"],[240.35,242.44,"so you claim every rupee back."],[242.51,246.09,"E-invoices and e-way bills are generated as you ship."],[246.16,250.39,"Your CA gets a clean monthly pack, not a folder of spreadsheets."],[250.46,253.22,"Month-end closes in days, not weeks."],[254.31,256.96,"And on top of it all, a control tower."],[257.03,258.89,"A morning brief on WhatsApp."],[258.96,261.05,"Alerts the moment something breaks."],[261.11,264.75,"Answers to any question about your business, in plain words."],[264.81,268.95,"And an eight-week cash forecast, so growth never runs out of cash."],[269.02,273.77,"Every number traces back to the order, the invoice and the rupee behind it."],[274.69,277.86,"And beyond the core, the same system grows with you."],[277.93,282.15,"Catalogue and price sync across every marketplace, and ONDC."],[282.21,285.43,"Abandoned-cart and reorder reminders on WhatsApp."],[285.49,287.72,"Influencer and sample tracking."],[287.78,291.15,"An AI support desk that answers order questions."],[291.22,293.81,"Return-abuse flags for repeat offenders."],[293.87,296.32,"Distributor orders with credit limits."],[296.39,298.96,"Attendance and payroll for your warehouse team."],[299.03,302.74,"And a compliance calendar, so no filing is ever missed."],[303.49,307.11,"We start with a two-week leakage audit of your last six months."],[307.18,311.84,"Then we connect your channels one by one, with the first module live in weeks."],[311.91,315.72,"Your data stays yours, and your team keeps the tools it knows."],[316.74,320.13,"In our working demo, on ninety days of sample data,"],[320.19,323.24,"it flagged one point six three lakh rupees."],[324.62,326.43,"Every order. Every rupee."],[326.49,327.88,"Every channel."],[328.01,330.64,"It starts with a two-week leakage audit."],[330.74,331.87,"Neural Weavers."],[331.94,334.67,"Write to founder at neural weavers dot com."]],"karigari":[[0.64,4.49,"Thirty kilos of tomato, billed at thirty-four rupees a kilo."],[4.56,6.29,"The contract says thirty-two."],[6.36,8.72,"The kitchen got twenty-seven and a half."],[8.88,11.65,"And today, that bill gets paid in full."],[12.27,14.32,"Dearer vendors. Phone orders."],[14.39,16.7,"Short deliveries. Unknown wastage."],[16.76,18.78,"Overbilling. Retyped bills."],[18.92,22.18,"Six leaks, and the numbers only show up at month-end."],[25.14,29.87,"Phase 1 matches every order, delivery and bill, across every outlet."],[29.96,31.34,"Five apps, one loop."],[31.4,33.07,"Order, receive, pay."],[34.87,38.79,"Each night, Janak's app drafts every outlet's order on one screen."],[38.85,41.87,"A dearer vendor needs a reason, and an approver."],[41.94,46.01,"Vendors confirm on WhatsApp, even with a voice note in Hindi."],[47.37,50.99,"At the back door, every delivery is weighed and photographed."],[51.05,52.66,"Two and a half kilos short?"],[52.73,55.37,"The vendor hears before anyone signs."],[56.17,58.25,"The bill is read from its photo."],[58.32,60.77,"Then matched to the order and delivery."],[60.84,62.85,"Eight hundred and eighty is paid."],[62.92,65.58,"One hundred and forty waits for a credit note."],[65.64,67.72,"Then it posts itself to Tally."],[68.62,73.18,"AI reads, checks and flags, so people only handle the exceptions."],[73.25,75.83,"Janak gets about five hours a day back."],[76.77,80.22,"Yogesh and Manish see every rupee of buying in one view,"],[80.28,83.38,"and can tap any number to see the bill behind it."],[83.44,87.28,"No one can both order and pay, and every change is logged."],[88.09,92.78,"Chains that buy by hand commonly lose one to three percent of what they spend."],[92.84,94.75,"If you buy sixteen crore a year,"],[94.82,98.8,"recovering two percent pays Phase 1 back in about six months."],[98.91,101.55,"You pay in parts, as each release goes live."],[101.61,103.69,"And Karigari owns all of it."],[105.09,107.03,"That's every kilo you buy."],[107.1,109.61,"The next phases cover the rest of the business,"],[109.67,112.24,"all built on the same Phase 1 data."],[113.64,115.28,"It starts with Petpooja."],[115.34,119.28,"It stays as your billing screen, but everything it records now flows in"],[119.34,120.59,"automatically."],[120.66,124.18,"Every bill, every KOT, every day-end close."],[124.25,126.88,"And stock is used up from every dish sold,"],[126.95,129.82,"so you know what should be left before anyone counts."],[131.09,134.75,"At six every morning, the founders get yesterday's sales,"],[134.82,137.5,"settlements and outlet profit on WhatsApp."],[137.57,142.0,"Zomato, Swiggy, Dineout and EazyDiner payouts are matched line by line,"],[142.07,145.43,"and cash, card and UPI are matched to the bank."],[145.49,148.19,"When a number moves, AI explains why."],[148.26,153.04,"And any question, in plain English, comes back as a chart or an Excel file."],[154.22,158.56,"Each month, every outlet gets its own profit and loss against budget,"],[158.62,160.93,"posted to Tally for every company."],[160.99,165.92,"FSSAI, excise and fire licences come with renewal reminders."],[165.99,168.7,"That's about three more hours off Janak's day."],[169.87,173.63,"In the kitchen, Chef Harpal's recipes become costed cards,"],[173.7,175.7,"priced at what you actually paid."],[175.77,180.94,"When paneer goes from three eighty to four twenty, every paneer dish is costed again."],[181.0,183.84,"What each kitchen should have used is checked against what it did,"],[183.9,185.81,"per dish, every day."],[186.79,190.69,"Menu engineering shows what sells, what earns, and what should go."],[190.75,194.43,"And demand forecasts feed tomorrow's orders and rosters."],[195.47,200.18,"Reviews from Google, Zomato and Swiggy land in one inbox per outlet,"],[200.25,202.5,"with replies drafted for approval."],[202.57,206.9,"Table feedback is tied to the bill, the table, the server and the dish."],[206.97,210.62,"A low score reaches the manager while the guest is still seated."],[210.68,215.59,"AI groups every review by theme, and each outlet gets a reputation score."],[216.74,221.06,"For your people, attendance is marked on the phone, inside the outlet."],[221.13,223.71,"Rosters are built from the covers you expect,"],[223.78,226.26,"with labour cost per cover by outlet."],[226.33,229.41,"Overtime, comp-off and leave are approved in the app,"],[229.48,232.08,"and payroll inputs are ready for each company."],[232.15,236.12,"Hiring, onboarding and staff documents live in one place."],[237.39,240.1,"And the next outlet is set up from the nearest one."],[240.16,243.1,"Vendors, rates and par levels, copied."],[243.17,248.19,"AI suggests par levels for the new city, with a day 1 to day 30 plan."],[248.25,253.09,"Franchise partners get their own portal, and royalty statements write themselves."],[254.32,259.2,"Purchases, sales, settlements, dish costs, labour, guests and new outlets."],[259.27,261.83,"Where your money moves, on one platform."],[261.89,266.57,"And every saving traces back to the bill, the shift or the table behind it."],[267.37,268.63,"You choose the order."],[268.69,271.62,"Each plan is scoped and priced only when you're ready."],[271.68,273.46,"Same data. Same apps."],[273.52,275.09,"Nothing new to learn."],[276.32,277.63,"Every kilo checked."],[277.69,278.92,"Every rupee matched."],[278.99,280.41,"Every guest heard."],[280.59,282.99,"It starts with a two-week discovery."]],"skinaa":[[1.29,4.67,"A customer in Pune orders your Aqua sunscreen."],[4.74,7.29,"Four hundred and eighty-nine rupees."],[7.49,9.1,"Amazon takes its fees."],[9.16,10.81,"The courier takes its share."],[10.88,13.42,"And some of it never comes back at all."],[13.52,15.9,"So how much actually reaches Skinaa's bank?"],[15.96,17.05,"And when?"],[17.71,22.61,"Amazon pays every seven days, after fees, taxes and adjustments."],[22.68,27.7,"Blinkit and Zepto pay thirty to forty-five days later, minus debit notes."],[27.77,32.68,"Your manufacturer, DHL and your CA each work from their own numbers."],[32.78,34.33,"Nothing matches on its own."],[34.4,36.16,"So money leaks. Quietly."],[36.23,37.39,"Every week."],[39.35,42.03,"So we built Finance OS, for Skinaa."],[42.1,45.29,"Every rupee. From order, to bank, to books."],[46.57,48.28,"It starts with one view."],[48.35,49.76,"Sales on one side."],[49.83,50.98,"Your bank on the other."],[51.05,53.38,"And every deduction in between."],[53.93,57.09,"Every Amazon order is rebuilt from the rate card,"],[57.16,60.1,"and checked against what Amazon actually paid."],[60.16,64.19,"Short payments, and orders never paid at all, stand out in red."],[64.93,68.32,"Say Amazon re-measures your Vitamin C face wash,"],[68.38,70.88,"and starts billing a heavier weight slab."],[70.95,75.7,"Finance OS catches it on every order, and drafts the dispute for you."],[76.48,77.78,"Damaged returns."],[77.85,79.16,"Missing returns."],[79.23,81.81,"Stock lost in Amazon's warehouse."],[81.88,84.45,"Each one becomes a claim, with a deadline."],[84.52,86.85,"Some windows are only fifteen days."],[86.92,89.18,"Nothing quietly expires again."],[89.72,93.72,"For Blinkit and Zepto, every purchase order is tracked through receipt,"],[93.79,95.48,"debit notes and payment."],[95.55,99.11,"And if a batch is too old for the dark store's shelf-life rule,"],[99.17,102.68,"you see it before you ship it, not after it's rejected."],[103.02,106.37,"Manufacturer invoices are matched to the purchase order,"],[106.44,108.24,"and to what actually arrived."],[108.31,111.35,"Small vendors get paid inside forty-five days."],[111.42,116.16,"And every DHL bill is checked for weight, zone and fuel surcharge."],[116.86,122.33,"Then, the real profit of every product, after fees, freight, returns and ads."],[122.39,126.72,"You see which products make money, and which lose it once ads are counted."],[126.78,131.09,"And an eight-week cash forecast shows what comes in, and what goes out."],[131.83,136.54,"At month end, your CA gets balanced Tally entries, with TCS,"],[136.61,139.94,"TDS and GST credits ready to claim."],[141.26,146.66,"On ninety days of sample data, it flagged nearly one point seven lakh rupees."],[146.82,149.74,"On your real account, it will find your number."],[150.62,152.64,"And this is only phase one."],[152.71,157.71,"Next: your own website store, with payment gateway and cash on delivery matched."],[157.77,161.67,"Flipkart, Tata 1mg and Clinikally, on the same ledger."],[161.74,165.15,"GST credits matched with the portal, automatically."],[165.22,167.6,"Fresh batches routed to quick commerce."],[167.67,170.93,"And a full batch trace, the day you ever need a recall."],[171.0,173.01,"Plus a morning brief on WhatsApp."],[173.07,175.8,"Ask your numbers anything, in plain words."],[176.56,177.89,"Every order matched."],[177.96,179.24,"Every claim filed."],[179.31,181.34,"Every rupee accounted for."],[181.52,184.85,"It starts with a leakage audit of your last six months."]],"rollsking":[[0.64,2.94,"Three hundred thousand orders a month."],[3.01,5.89,"A hundred and thirty outlets, fifteen cities."],[5.96,10.21,"Every roll made with your own bread, your own sauce, your own marinade."],[10.29,13.73,"So which outlet used more sauce than it sold yesterday?"],[14.77,16.6,"Dispatches checked by hand."],[16.67,18.23,"Stock counted at night."],[18.29,20.9,"Aggregator payouts trusted, not matched."],[20.97,23.2,"Cold-food complaints read too late."],[23.27,25.63,"Every new city set up from scratch."],[25.79,29.01,"Five gaps, and they grow with every outlet you open."],[32.6,36.8,"One platform for RollsKing, from the base kitchen to the last bite."],[38.6,43.01,"Each night, every outlet's order is drafted from its par levels and tomorrow's"],[43.07,44.14,"forecast."],[44.21,49.64,"The base kitchen gets one production plan: breads, sauces and marinades, by batch."],[49.71,52.77,"Every crate leaves with a batch code and a use-by date,"],[52.84,56.07,"and the outlet confirms what arrived, with a photo."],[56.14,58.6,"Raw material is bought at contract rates,"],[58.66,61.75,"and every vendor bill is matched before it's paid."],[63.02,67.31,"No outlet can change a recipe, so the platform knows exactly what each one"],[67.37,68.44,"should use."],[68.51,71.21,"Sales from every channel, times the recipe,"],[71.28,73.5,"are checked against what was dispatched."],[73.57,77.48,"The outlet using more than it sold shows up the next morning."],[78.62,81.16,"Most orders come through Swiggy and Zomato."],[81.22,86.05,"Every payout is matched order by order: commission, discounts and refunds."],[86.12,88.48,"Short payouts are claimed, not missed."],[88.55,93.39,"And ad spend is tied to the orders it actually brought in, outlet by outlet."],[94.24,97.08,"Every order is timed from accept to handover."],[97.14,100.53,"When an outlet slows down, the manager knows during the rush,"],[100.59,102.18,"not after the reviews."],[102.25,106.16,"Complaints about cold food or missing items are grouped by outlet,"],[106.22,108.09,"by shift and by item."],[109.24,114.08,"And to depend less on aggregators: ordering on WhatsApp and your own website,"],[114.14,116.57,"with rewards that bring regulars back."],[116.64,119.52,"Those customers, and their data, stay yours."],[120.47,124.33,"At six every morning, Pradeep and Arjun see yesterday's orders,"],[124.39,127.17,"payouts and profit, outlet by outlet."],[127.24,129.93,"When a number moves, AI explains why."],[130.0,134.79,"And any question, in plain English, comes back as a chart or an Excel file."],[135.49,138.81,"Attendance is marked on the phone, inside the outlet."],[138.88,143.22,"Rosters are built from the orders you expect, late-night shifts included."],[143.28,146.99,"Opening, hygiene and closing checklists are done with photos,"],[147.06,149.62,"and every new hire's training is tracked."],[150.47,155.13,"Every new outlet, cloud kitchen or dine-in, is set up from the nearest one."],[155.2,157.9,"AI suggests par levels for the new city."],[157.97,161.05,"And master franchise partners get their own portal,"],[161.12,163.45,"with royalty statements written for them."],[164.37,169.69,"Supply, recipes, payouts, speed, guests, direct orders, people and new outlets."],[169.76,172.31,"Where your money moves, on one platform."],[172.38,177.1,"And every saving traces back to the batch, the order or the shift behind it."],[178.01,180.35,"Start with the base kitchen, or with payouts."],[180.41,181.83,"You choose the order."],[181.9,183.64,"Same data. Same apps."],[183.7,185.94,"Your code and your data stay yours."],[186.94,188.09,"Every batch tracked."],[188.15,189.46,"Every payout matched."],[189.53,191.18,"Every roll, the same."],[191.38,193.77,"It starts with a two-week discovery."]],"toorunt":[[0,3,"AI can now write code in seconds."],[3,6,"But writing code was never the bottleneck."],[6,8,"Someone still has to understand the requirement,"],[8,11,"manage risk, test the result, review the change,"],[11,14,"and take responsibility when it reaches production."],[14,18,"Toorunt AI is an autonomous AI engineering team."],[18,21,"Give it a product idea or backlog ticket"],[21,25,"and it manages the complete journey from planning to production."],[25,28,"As soon as the staff engineer gets access,"],[28,32,"he starts setting up his company workspace for the team."],[32,35,"Team setup includes integration of"],[35,39,"GitHub, Jira, Slack and many more."],[39,44,"Then each AI engineer is onboarded like a new team member."],[44,51,"It receives its own Jira, Slack, GitHub and deployment identities,"],[51,57,"along with repository context, capabilities, policy and budget."],[57,64,"You describe a product idea, feature request, bug report or Jira ticket in plain language."],[64,68,"Toorunt AI finds the right repository, checks for missing information,"],[68,72,"and asks a focused question instead of making an assumption."],[72,78,"Before writing code, it prepares an implementation plan covering the proposed changes,"],[78,83,"risks, dependencies and acceptance criteria."],[83,89,"A person reviews the plan and either approves it or returns it with feedback."],[89,92,"No code begins until the intended outcome is clear."],[92,95,"Our autonomous engineers cannot approve their own code."],[95,101,"Another independent AI engineer reviews the change, exactly as it happens in the real world."],[101,108,"Feedback is fixed, explained, clarified, or refused the moment it violates a safety rule."],[108,112,"Every change crosses 14 mandatory gates."],[112,114,"These are not AI opinions."],[114,118,"We constructed the algorithms in such a way"],[118,123,"that it makes sure 100% industry-grade quality code is shipped."],[123,126,"Is the repository right?"],[126,128,"Are the requirements clear?"],[128,130,"Was it approved?"],[130,133,"Are the tests and quality checks green?"],[133,135,"Is the code secure?"],[135,137,"Was it independently reviewed?"],[137,141,"14 gates. Nothing turns green without evidence."],[141,148,"It knows what it can handle and when it must ask a person."],[148,151,"Three decisions stay with your team."],[151,158,"Approve the plan, approve the reviewed change, and unlock the merge to deploy."],[158,165,"Everything between those decisions can run autonomously and remains on a tamper-proof record."],[167,170,"Shipping isn't the finish line."],[170,177,"If things go wrong after a launch, Toorunt is already on call 24/7."],[177,182,"When a problem pops up, it quickly checks if a recent change is to blame."],[182,188,"It digs in to find the root cause, bringing clear evidence to show what went wrong"],[188,193,"and explaining exactly why it ruled out other possibilities."],[193,198,"For simple, safe fixes like undoing a change or restarting a stuck process,"],[198,203,"it acts on its own to keep your systems running smoothly."],[203,209,"For anything bigger, it pauses and waits for your thumbs up."],[209,216,"It only considers the problem solved when everything is fully back to normal and stays that way."],[216,220,"Then it writes up an incident report"],[220,228,"and submits a permanent fix that goes through the same rigorous quality checks as a brand new feature."],[228,238,"We have also integrated a chatbot, so if something slips your mind, it makes sure you know everything."],[238,247,"Bring one real backlog item and watch it ship with accountability."]]};
+  var FILMS = {
+    toorunt: {
+      title: 'Toorunt AI', src: 'media/film-toorunt.mp4', poster: 'img/toorunt-film-thumb.jpg', cc: true,
+      desc: 'An autonomous AI engineering team that takes a ticket from plan to production: 14 gates, three decisions kept by people, and on call after launch.',
+      note: 'Product walkthrough on real product screens with test-mode data.',
+      ch: [[0, 'Code was never the bottleneck'], [14, 'An AI engineering team'], [25, 'Setting up the workspace'], [39, 'Onboarding AI engineers'], [57, 'A request in plain language'], [72, 'A plan a person approves'], [92, 'Independent review'], [108, 'Fourteen gates'], [148, 'Three human decisions'], [167, 'On call after launch'], [216, 'Incident report and fix'], [228, 'Ask it anything'], [238, 'Close']]
+    },
+    ca: {
+      title: 'CA Automation', src: 'media/film-ca-automation.mp4', poster: 'img/ca-thumb.jpg', cc: false,
+      desc: 'A month-end checklist ticks itself: bank, bills, GST, TDS and payroll prepared by software, approved by the CA.',
+      note: 'Demo company and sample data. Captions are part of the picture.',
+      ch: [[0, 'The month-end list'], [16, 'The idea'], [29, 'Client papers'], [50, 'Bank statements'], [71, 'Tally, both ways'], [83, 'Purchase bills'], [103, 'GST returns'], [126, 'TDS'], [151.5, 'Payroll, PF and ESI'], [163, 'MSME dues'], [181.5, 'Investments'], [197, 'Closing stock'], [212.5, 'Review and approval'], [234, 'Due dates'], [248, 'Year-end accounts'], [266, 'Close']]
+    },
+    karigari: {
+      title: 'Restaurant Solution: Karigari', src: 'media/film-karigari.mp4', poster: 'img/karigari-thumb.jpg', cc: true,
+      desc: 'Procurement for a 13-outlet restaurant group: every order, delivery and bill matched before it is paid, then the rest of the business on the same data.',
+      note: 'Pre-sales film made for the client. Example figures; proposal pricing is blurred.',
+      ch: [[0, 'Six leaks'], [25, 'Phase 1: order, receive, pay'], [34, 'Night orders'], [47, 'At the back door'], [56, 'The bill, matched'], [68, 'People handle exceptions'], [88, 'Built to pay for itself'], [107, 'Petpooja, connected'], [131, 'Six every morning'], [154, "Every outlet's P&L"], [169, 'Kitchen cost'], [195, 'Guest feedback'], [216, 'People and rosters'], [237, 'The next outlet'], [254, 'One platform'], [267, 'You choose the order'], [276, 'Close']]
+    },
+    ecom: {
+      title: 'E-commerce operating system', src: 'media/film-ecommerce-os.mp4', poster: 'img/ecom-thumb.jpg', cc: true,
+      desc: 'One ledger across marketplaces, couriers, ads and Tally, so a seller can see where money leaks.',
+      note: 'Demo app with sample data; figures in the film are illustrative.',
+      ch: [[1.2, 'Six channels, twelve tools'], [16.5, 'The stack'], [55.2, 'One system'], [67, 'Money in'], [99.4, 'The leaks'], [137.8, 'Orders and customers'], [172.6, 'Stock and supply'], [203.2, 'Profit and growth'], [226.6, 'Books and tax'], [254.2, 'Control tower'], [274.6, 'Beyond the core'], [303.4, 'How we work'], [316.6, 'Proof'], [324.5, 'Close']]
+    },
+    skinaa: {
+      title: 'E-commerce Solution', src: 'media/film-skinaa.mp4', poster: 'img/skinaa-thumb.jpg', cc: true,
+      desc: "Every rupee from a skincare brand's Amazon and quick-commerce orders, traced to the bank and the books.",
+      note: 'Pre-sales film on sample data; figures are illustrative.',
+      ch: [[0, 'One order'], [17, 'Where money leaks'], [39, 'Finance OS'], [53, 'Every Amazon fee'], [76, 'Losses become claims'], [89, 'Quick commerce'], [103, 'Suppliers and freight'], [116, 'Real profit'], [131, 'Books for the CA'], [141, 'What it found'], [150, 'What comes next'], [176, 'Close']]
+    },
+    rollsking: {
+      title: 'QSR Solution: Rolls King', src: 'media/film-rollsking.mp4', poster: 'img/rollsking-thumb.jpg', cc: true,
+      desc: 'One platform for a 130-outlet roll chain, from the base kitchen to the last bite: batches, recipes, payouts, speed and new outlets.',
+      note: 'Pitch film. Illustrative screens; each module is scoped in discovery.',
+      ch: [[0, 'Five gaps'], [32, 'One platform'], [38, 'Base kitchen'], [56, 'Buying'], [63, 'Recipes'], [78, 'Payouts'], [94, 'Speed and complaints'], [109, 'Direct orders'], [120, "Founders' view"], [135, 'People'], [150, 'The next outlet'], [164, 'One platform'], [178, 'You choose'], [186, 'Close']]
+    }
+  };
+  var cine = $('#cine'), chapList = $('#chapters'), current = 'toorunt';
+  var ccBox = $('#cc'), ccText = $('#cc span'), ccBtn = $('#cc-btn'), ccOn = true;
+  function fmt(s) { s = Math.floor(s); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+  function renderChapters() {
+    var f = FILMS[current]; chapList.innerHTML = '';
+    f.ch.forEach(function (c, n) {
+      var li = d.createElement('li'), b = d.createElement('button');
+      b.type = 'button'; b.className = 'chap' + (n === 0 ? ' on' : '');
+      b.innerHTML = '<span class="ts">' + fmt(c[0]) + '</span>';
+      b.appendChild(d.createTextNode(c[1]));
+      b.addEventListener('click', function () { seek(c[0], true); });
+      li.appendChild(b); chapList.appendChild(li);
+    });
+  }
+  function labelCC() { ccBtn.textContent = ccOn ? 'Captions on' : 'Captions off'; ccBtn.setAttribute('aria-pressed', ccOn ? 'true' : 'false'); ccBox.hidden = !ccOn || !FILMS[current].cc; }
+  function loadFilm(id) {
+    if (id === current && cine.currentSrc) return;
+    var f = FILMS[id]; current = id;
+    cine.pause();
+    while (cine.firstChild) cine.removeChild(cine.firstChild);
+    var s = d.createElement('source'); s.src = f.src; s.type = 'video/mp4'; cine.appendChild(s);
+    cine.poster = f.poster; cine.load();
+    ccText.textContent = ''; ccBtn.hidden = !f.cc; labelCC();
+    $('#cine-title').textContent = f.title; $('#cine-desc').textContent = f.desc; $('#cine-note').textContent = f.note;
+    $$('.pl').forEach(function (p) { p.setAttribute('aria-current', p.getAttribute('data-film') === id ? 'true' : 'false'); });
+    renderChapters();
+  }
+  function seek(t, play) {
+    var go = function () { try { cine.currentTime = t; } catch (e) {} if (play) { var p = cine.play(); if (p && p.catch) p.catch(function () {}); } };
+    if (cine.readyState >= 1) go();
+    else {
+      cine.addEventListener('loadedmetadata', function once() { cine.removeEventListener('loadedmetadata', once); go(); });
+      if (play) { var p = cine.play(); if (p && p.catch) p.catch(function () {}); } else { cine.preload = 'metadata'; cine.load(); }
+    }
+  }
+  ccBtn.addEventListener('click', function () { ccOn = !ccOn; labelCC(); });
+  function drawCC(t) {
+    var list = CUES && CUES[current], line = '';
+    if (list && ccOn) for (var n = 0; n < list.length; n++) { if (t >= list[n][0] && t <= list[n][1]) { line = list[n][2]; break; } }
+    if (ccText.textContent !== line) ccText.textContent = line;
+    ccText.hidden = !line;
+  }
+  cine.addEventListener('seeked', function () { drawCC(cine.currentTime); });
+  cine.addEventListener('timeupdate', function () {
+    var f = FILMS[current], t = cine.currentTime, idx = 0;
+    drawCC(t);
+    for (var n = 0; n < f.ch.length; n++) if (t + 0.25 >= f.ch[n][0]) idx = n;
+    $$('.chap', chapList).forEach(function (b, n) { b.classList.toggle('on', n === idx); if (n === idx) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
+  });
+  $$('.pl').forEach(function (p) { p.addEventListener('click', function () { loadFilm(p.getAttribute('data-film')); }); });
+  $$('[data-play]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.getAttribute('data-play'), at = parseFloat(b.getAttribute('data-at') || '0');
+      loadFilm(id); seek(at, true); goTo($('#films'));
+    });
+  });
+  renderChapters(); labelCC();
+
+  /* Nav highlight */
+  var links = $$('.nav-links a');
+  var spy = { work: 'work', cases: 'cases', toorunt: 'cases', navigoin: 'cases', msetcl: 'cases', 'ca-automation': 'cases', 'pump-ledger': 'cases', outbound: 'cases', films: 'films', earlier: 'earlier', contact: 'contact' };
+  if (hasIO) {
+    var sio = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var key = spy[en.target.id];
+        links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href').slice(1) === key); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(spy).forEach(function (id) { var el = d.getElementById(id); if (el) sio.observe(el); });
+  }
+
+  if (!motion) return;
+
+  /* ---------- Motion (GSAP + ScrollTrigger) ---------- */
+  function splitChars(h) {
+    var text = h.textContent.replace(/\s+/g, ' ').trim(), out = [];
+    var holder = d.createElement('span'); holder.setAttribute('aria-hidden', 'true');
+    text.split(' ').forEach(function (w, wi, arr) {
+      var ws = d.createElement('span'); ws.className = 'sw';
+      Array.prototype.forEach.call(w, function (ch) { var s = d.createElement('span'); s.className = 'sc'; s.textContent = ch; ws.appendChild(s); out.push(s); });
+      holder.appendChild(ws); if (wi < arr.length - 1) holder.appendChild(d.createTextNode(' '));
+    });
+    var sr = d.createElement('span'); sr.className = 'sr-only'; sr.textContent = text;
+    h.textContent = ''; h.appendChild(sr); h.appendChild(holder);
+    return out;
+  }
+  function splitWords(root) {
+    var words = [];
+    Array.prototype.slice.call(root.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = d.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(function (p) {
+          if (!p) return;
+          if (/^\s+$/.test(p)) frag.appendChild(d.createTextNode(p));
+          else { var s = d.createElement('span'); s.className = 'w'; s.textContent = p; frag.appendChild(s); words.push(s); }
+        });
+        root.replaceChild(frag, n);
+      } else if (n.nodeType === 1) words = words.concat(splitWords(n));
+    });
+    return words;
+  }
+
+  /* Handwritten notes type themselves, one letter at a time */
+  function splitNote(el) {
+    var chars = [];
+    (function walk(n) {
+      Array.prototype.slice.call(n.childNodes).forEach(function (c) {
+        if (c.nodeType === 3) {
+          var f = d.createDocumentFragment();
+          Array.prototype.forEach.call(c.textContent, function (ch) { var sp = d.createElement('span'); sp.className = 'ch'; sp.textContent = ch; f.appendChild(sp); chars.push(sp); });
+          n.replaceChild(f, c);
+        } else if (c.nodeType === 1 && c.tagName.toLowerCase() !== 'svg') walk(c);
+      });
+    })(el);
+    var paths = $$('.rh-arrow path', el);
+    paths.forEach(function (p) { var L = 220; try { L = p.getTotalLength(); } catch (e) {} p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p._len = L; });
+    el._chars = chars; el._paths = paths; el._typed = false;
+  }
+  function typeNote(el) {
+    if (!el || el._typed) return; el._typed = true;
+    G.to({}, { duration: el._chars.length * 0.045, onUpdate: function () { var k = Math.round(this.progress() * el._chars.length); for (var i = 0; i < k; i++) el._chars[i].classList.add('on'); }, onComplete: function () { el._chars.forEach(function (c) { c.classList.add('on'); }); } });
+    el._paths.forEach(function (p, k) { G.to(p, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut', delay: el._chars.length * 0.045 * 0.6 + k * 0.12 }); });
+  }
+  var noteA = $('.rh-note.n-a'), noteB = $('.rh-note.n-b'), noteS = $('.rs-note');
+  [noteA, noteB, noteS].forEach(function (n) { if (n) splitNote(n); });
+
+  /* Landing: the second screen slides up over the first as a solid page, then its lines arrive one by one.
+     The page is opaque, so the two headlines never show through each other, whichever way you scroll. */
+  (function scene() {
+    var sc = $('#scene'), rs = $('#scene .rs'); if (!sc || !rs) return;
+    var lines = $$('.rs-h .ln');
+    G.set(rs, { yPercent: 100, visibility: 'visible' });
+    G.set(lines, { opacity: 0, y: 34 });
+    G.set(noteS, { opacity: 0 });
+    var tl = G.timeline({ scrollTrigger: { trigger: sc, start: 'top top', end: '+=170%', pin: true, scrub: 0.5, anticipatePin: 1, refreshPriority: 1,
+      onUpdate: function (self) { if (self.progress > 0.76) typeNote(noteS); } } });
+    tl.to('.rh-band video', { scale: 1.1, ease: 'none', duration: 0.42 }, 0)
+      .to(rs, { yPercent: 0, ease: 'power1.inOut', duration: 0.42 }, 0)
+      .to('.rh-in', { scale: 0.93, opacity: 0.3, transformOrigin: '50% 35%', ease: 'power1.in', duration: 0.42 }, 0)
+      .to(lines, { opacity: 1, y: 0, ease: 'power2.out', duration: 0.14, stagger: 0.1 }, 0.44)
+      .to(noteS, { opacity: 1, duration: 0.03 }, 0.76)
+      .to({}, { duration: 0.2 }, 0.8);
+  })();
+
+  /* Pinned sections first, so later triggers measure the extra scroll they add */
+  (function journey() {
+    var j = $('#journey'); if (!j) return;
+    var mm = G.matchMedia();
+    mm.add('(min-width: 900px)', function () {
+      j.classList.add('h');
+      var pinEl = $('.journey-pin', j), track = $('.journey-track', j), token = $('.j-token', j), fill = $('.j-rail i', j), steps = $$('.j-step', j);
+      var lastStep = steps[steps.length - 1];
+      var dotX = function (s) { var dt = $('.j-dot', s); return s.offsetLeft + dt.offsetLeft + dt.offsetWidth / 2; };
+      var dist = function () { return Math.max(0, dotX(lastStep) - token.offsetLeft); };
+      var update = function () {
+        var x = G.getProperty(track, 'x') || 0, tx = token.offsetLeft;
+        var cur = -1;
+        steps.forEach(function (s, n) { var on = dotX(s) + x <= tx + 2; s.classList.toggle('on', on); if (on) cur = n; });
+        steps.forEach(function (s, n) { s.classList.toggle('cur', n === cur); });
+        fill.style.width = Math.max(0, Math.min(tx - x, dotX(lastStep))) + 'px';
+      };
+      G.to(track, {
+        x: function () { return -dist(); }, ease: 'none', onUpdate: update,
+        scrollTrigger: { trigger: pinEl, start: 'top top', end: function () { return '+=' + Math.round(dist() * 1.15); }, pin: true, scrub: 0.5, invalidateOnRefresh: true, onRefresh: update }
+      });
+      update();
+      return function () { j.classList.remove('h'); steps.forEach(function (s) { s.classList.remove('on', 'cur'); }); fill.style.width = ''; };
+    });
+  })();
+
+  /* Hero intro, after a short counting preloader */
+  /* Landing intro: the strip opens, then each line arrives in turn, then the button, then the notes write themselves */
+  G.set('.rh-h .ln', { opacity: 0, y: 22 });
+  G.set('.rh-band', { opacity: 0, clipPath: 'inset(0% 38% 0% 38%)' });
+  G.set('.rh-meta', { opacity: 0 });
+  G.set('.rh [data-fade]', { opacity: 0, y: 14 });
+  /* Read in order, one piece at a time: each line gets its own moment before the next one arrives */
+  function heroIntro() {
+    var hl = $$('.rh-h .ln'), line = { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' };
+    G.timeline()
+      .to(hl[0], line, 0.3)                                    /* FROM BUSINESS */
+      .to(hl[1], line, 1.3)                                    /* PROBLEM */
+      .to('.rh-band', { opacity: 1, duration: 0.8, ease: 'power2.out' }, 2.3)
+      .to('.rh-band', { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.5, ease: 'expo.inOut', clearProps: 'clipPath' }, 2.3)
+      .to('.rh-meta', { opacity: 1, duration: 0.7, ease: 'power2.out' }, 3.4)
+      .to(hl[2], line, 3.8)                                    /* TO AI SYSTEM */
+      .to(hl[3], line, 4.8)                                    /* IN PRODUCTION. */
+      .to('.rh-sub', { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' }, 6.0)
+      .to('.rh-cta', { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }, 7.6)
+      .to('.rh-roles', { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }, 8.2)
+      .add(function () { typeNote(noteA); }, 8.8)
+      .add(function () { typeNote(noteB); }, 10.4);
+    Screen.enter();
+  }
+  (function start() {
+    html.classList.remove('is-loading');
+    var done = false, go = function () { if (done) return; done = true; heroIntro(); };
+    if (d.fonts && d.fonts.ready) d.fonts.ready.then(function () { setTimeout(go, 150); });
+    setTimeout(go, 1200);
+  })();
+
+  /* Headlines rise letter by letter */
+  $$('[data-split]').forEach(function (h) {
+    var chars = splitChars(h);
+    G.from(chars, { yPercent: 115, duration: 1.1, ease: 'expo.out', stagger: Math.min(0.03, 0.6 / chars.length), scrollTrigger: { trigger: h, start: 'top 88%' } });
+  });
+
+  /* The manifesto lights up word by word */
+  var man = $('.manifesto');
+  if (man) {
+    var ws = splitWords(man);
+    G.fromTo(ws, { opacity: 0.14 }, { opacity: 1, ease: 'none', stagger: 0.08, scrollTrigger: { trigger: man, start: 'top 82%', end: 'bottom 48%', scrub: 0.5 } });
+  }
+
+  /* Blocks fade up as they arrive */
+  var rv = $$('[data-reveal]');
+  G.set(rv, { opacity: 0, y: 36 });
+  ST.batch(rv, { start: 'top 90%', once: true, onEnter: function (b) { G.to(b, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.08, overwrite: true }); } });
+
+  /* Work rows slide in */
+  G.from(rows, { opacity: 0, y: 30, duration: 1, ease: 'expo.out', stagger: 0.05, scrollTrigger: { trigger: '#rows', start: 'top 85%' } });
+
+  /* Counters */
+  $$('[data-count]').forEach(function (el) {
+    var to = parseFloat(el.getAttribute('data-count')), o = { v: 0 };
+    el.textContent = '0';
+    ST.create({ trigger: el, start: 'top 92%', once: true, onEnter: function () { G.to(o, { v: to, duration: 1.8, ease: 'power3.out', onUpdate: function () { el.textContent = Math.round(o.v).toLocaleString('en-US'); } }); } });
+  });
+
+  /* Gentle parallax on screenshots and the big case numbers */
+  $$('[data-parallax]').forEach(function (el) {
+    G.fromTo(el, { yPercent: -5, scale: 1.1 }, { yPercent: 5, scale: 1.1, ease: 'none', scrollTrigger: { trigger: el.parentNode, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+  $$('.case-num').forEach(function (el) {
+    G.fromTo(el, { yPercent: 25 }, { yPercent: -35, ease: 'none', scrollTrigger: { trigger: el.parentNode, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+
+  /* The paper edge curves away into the contact section */
+  G.fromTo('.curve', { scaleY: 1 }, { scaleY: 0, ease: 'none', scrollTrigger: { trigger: '#contact', start: 'top bottom', end: 'top 25%', scrub: true } });
+
+  window.addEventListener('load', function () { ST.refresh(); });
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(function () { ST.refresh(); });
+})();
+</script>
+
+</body>
+</html>
