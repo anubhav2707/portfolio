@@ -595,11 +595,11 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
       <span class="ln"><span>problem</span></span>
       <span class="rh-strip" data-loop-scope>
         <span class="rh-band" data-cursor="Films">
-          <video data-loop muted loop playsinline preload="auto" poster="img/strip-film-poster.jpg" aria-hidden="true"><source src="media/strip-film-phone.mp4" type="video/mp4" media="(max-width:760px)"><source src="media/strip-film.mp4" type="video/mp4"></video>
+          <video data-loop muted loop playsinline preload="none" poster="img/strip-film-poster.jpg" aria-hidden="true"><source data-src="media/strip-film-phone.mp4" type="video/mp4" media="(max-width:760px)"><source data-src="media/strip-film.mp4" type="video/mp4"></video>
           <span class="rh-grain" aria-hidden="true"></span>
         </span>
         <span class="rh-meta">
-          <span class="rh-tag" aria-hidden="true"><b id="rh-t">Showreel</b><span class="rh-more"> · <span id="rh-d">Six products, six kinds of business</span></span></span>
+          <span class="rh-tag" aria-hidden="true"><b id="rh-t">Showreel</b><span class="rh-more"> · <span id="rh-d">Six kinds of business, one engineer</span></span></span>
           <button type="button" class="vid-toggle rh-pause" data-toggle data-what="showreel">Pause</button>
         </span>
       </span>
@@ -1032,8 +1032,8 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
       <div class="exhibit ca-ex">
         <figure class="wide" data-reveal>
           <div class="vid" data-cursor="Muted">
-            <video data-loop muted loop playsinline preload="metadata" poster="img/clip-ca-bank.jpg" aria-label="Clip from the CA Automation film: a scanned bank statement becomes ledger entries, each matched to a party.">
-              <source src="media/clip-ca-bank.mp4" type="video/mp4">
+            <video data-loop muted loop playsinline preload="none" poster="img/clip-ca-bank.jpg" aria-label="Clip from the CA Automation film: a scanned bank statement becomes ledger entries, each matched to a party.">
+              <source data-src="media/clip-ca-bank.mp4" type="video/mp4">
             </video>
             <button type="button" class="vid-toggle" data-toggle data-what="clip">Pause</button>
           </div>
@@ -1396,12 +1396,30 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
   /* Looping muted clips: play in view, respect a viewer's pause, never autoplay with reduced motion */
   $$('video[data-loop]').forEach(function (v) {
     var holder = v.closest('[data-loop-scope]') || v.parentNode, btn = $('[data-toggle]', holder), userPaused = reduce;
+    v._inView = !hasIO;
+    v._kick = function () { if (!userPaused && v._inView) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } };
     function label() { if (!btn) return; btn.textContent = v.paused ? 'Play' : 'Pause'; btn.setAttribute('aria-label', (v.paused ? 'Play ' : 'Pause ') + (btn.getAttribute('data-what') || 'video')); }
     if (btn) btn.addEventListener('click', function (e) { e.stopPropagation(); if (v.paused) { userPaused = false; var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { userPaused = true; v.pause(); } });
     v.addEventListener('play', label); v.addEventListener('pause', label);
-    if (hasIO) new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting && !userPaused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else if (!en.isIntersecting) v.pause(); }); }, { threshold: 0.15 }).observe(v);
+    if (hasIO) new IntersectionObserver(function (es) { es.forEach(function (en) { v._inView = en.isIntersecting; if (en.isIntersecting && !userPaused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else if (!en.isIntersecting) v.pause(); }); }, { threshold: 0.15 }).observe(v);
     label();
   });
+  /* Videos load last. Their sources wait in data-src until the page itself (text, fonts, images) has loaded; the hero
+     strip waits one step more, for the moment the intro opens its window (straight away when there is no intro). */
+  function arm(v) {
+    if (!v || v._armed) return; v._armed = true;
+    $$('source[data-src]', v).forEach(function (el) { el.setAttribute('src', el.getAttribute('data-src')); });
+    v.preload = 'auto'; v.load();
+    v.addEventListener('loadeddata', function () { if (v._kick) v._kick(); }, { once: true });
+  }
+  var pageLoaded = d.readyState === 'complete', stripOpen = !motion;
+  function armVideos() {
+    if (!pageLoaded) return;
+    $$('video[data-loop]').forEach(function (v) { if (stripOpen || !v.closest('.rh-band')) arm(v); });
+  }
+  function openStrip() { stripOpen = true; armVideos(); }
+  if (pageLoaded) armVideos(); else window.addEventListener('load', function () { pageLoaded = true; armVideos(); });
+
   /* Hero: the screening room. The showreel plays on a tilted screen that lights the room, and the caption follows its cuts. */
   var Screen = (function () {
     var hero = $('#top'), rig = $('.b-rig'), vid = $('.b-vid'), amb = $('.b-amb'), scr = $('.b-screen'), pbtn = $('.b-pause');
@@ -1449,7 +1467,7 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
   /* The strip names each piece of work as it plays */
   (function () {
     var v = $('.rh-band video'), t = $('#rh-t'), dd = $('#rh-d'); if (!v || !t) return;
-    var CH = [[0, 'Showreel', 'Six products, six kinds of business'], [7.2, 'Anubhav Khandelwal', 'CEO & Lead Engineer'], [10.8, 'Toorunt AI', 'The questions every change has to answer'], [13.2, 'Toorunt AI', 'Nothing ships without evidence'], [15.6, 'CA Automation', 'A bank statement becomes ledger entries'], [18, 'NaviGoIn', 'A ride-hailing app, public on Android'], [21.6, 'Restaurant Solution: Karigari', 'Each bill line checked before it is paid'], [24, 'E-commerce OS', 'Every marketplace fee recalculated'], [26.4, 'QSR Solution: Rolls King', 'Every order timed, outlet by outlet'], [28.8, 'Work with me', 'Bring me your problem']];
+    var CH = [[0, 'Showreel', 'Six kinds of business, one engineer'], [4.8, 'Anubhav Khandelwal', 'I can solve any business problem'], [7.2, 'Anubhav Khandelwal', 'CEO & Lead Engineer'], [8.4, 'Toorunt AI', 'The questions every change has to answer'], [14.4, 'Toorunt AI', 'Nothing ships without evidence'], [16.8, 'CA Automation', 'A bank statement becomes ledger entries'], [19.2, 'NaviGoIn', 'A ride-hailing app, public on Android'], [22.8, 'Restaurant Solution: Karigari', 'Each bill line checked before it is paid'], [25.2, 'E-commerce OS', 'Every marketplace fee recalculated'], [27.6, 'QSR Solution: Rolls King', 'Every order timed, outlet by outlet'], [30, 'Work with me', 'Bring me your problem']];
     var cur = -1;
     v.addEventListener('timeupdate', function () {
       var x = v.currentTime, k = 0;
@@ -1765,6 +1783,7 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
     G.timeline()
       .to(hl[0], line, 0.3)                                    /* FROM BUSINESS */
       .to(hl[1], line, 1.3)                                    /* PROBLEM */
+      .add(openStrip, 2.3)                                       /* the strip's film starts loading as its window opens */
       .to('.rh-band', { opacity: 1, duration: 0.8, ease: 'power2.out' }, 2.3)
       .to('.rh-band', { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.5, ease: 'expo.inOut', clearProps: 'clipPath' }, 2.3)
       .to('.rh-meta', { opacity: 1, duration: 0.7, ease: 'power2.out' }, 3.4)
