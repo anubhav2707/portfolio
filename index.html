@@ -483,8 +483,7 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
 .rh-h .ln>span,.rs-h .ln>span{display:block}
 .rh-h .ln{pointer-events:none}
 .rh-band{position:relative;z-index:1;display:block;width:100%;aspect-ratio:4.2/1;overflow:hidden;background:#000;cursor:pointer;border-radius:4px}
-.rh-band video{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.58);transform:scale(1.04);transition:filter .7s var(--ease)}
-.rh-band:hover video{filter:grayscale(0) contrast(1) brightness(.95)}
+.rh-band video{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
 .rh-grain{position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.9'/></svg>")}
 .rh-note{position:absolute;z-index:3;font-size:clamp(.95rem,.7rem + .5vw,1.25rem);color:#EDEBE6;pointer-events:none}
 .rh-arrow{position:absolute;width:5.2em;height:auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -596,18 +595,18 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
       <span class="ln"><span>problem</span></span>
       <span class="rh-strip" data-loop-scope>
         <span class="rh-band" data-cursor="Films">
-          <video data-loop muted loop playsinline preload="auto" poster="img/strip-poster.jpg" aria-hidden="true"><source src="media/strip-reel.mp4" type="video/mp4"></video>
+          <video data-loop muted loop playsinline preload="auto" poster="img/strip-film-poster.jpg" aria-hidden="true"><source src="media/strip-film-phone.mp4" type="video/mp4" media="(max-width:760px)"><source src="media/strip-film.mp4" type="video/mp4"></video>
           <span class="rh-grain" aria-hidden="true"></span>
         </span>
         <span class="rh-meta">
-          <span class="rh-tag" aria-hidden="true"><b id="rh-t">Toorunt AI</b><span class="rh-more"> · <span id="rh-d">Nothing ships without evidence</span></span></span>
+          <span class="rh-tag" aria-hidden="true"><b id="rh-t">Showreel</b><span class="rh-more"> · <span id="rh-d">Six products, six kinds of business</span></span></span>
           <button type="button" class="vid-toggle rh-pause" data-toggle data-what="showreel">Pause</button>
         </span>
       </span>
       <span class="ln"><span>to AI system</span></span>
       <span class="ln"><span>in production.</span></span>
     </h1>
-    <p class="rh-note n-b hand" aria-hidden="true"><svg class="rh-arrow" viewBox="0 0 110 60" aria-hidden="true"><path d="M104 8 C 80 6, 40 14, 12 44"/><path d="M10 30 L10 46 L25 46"/></svg>11,153 tests,<br>0 failed</p>
+    <p class="rh-note n-b hand" aria-hidden="true"><svg class="rh-arrow" viewBox="0 0 110 60" aria-hidden="true"><path d="M104 8 C 80 6, 40 14, 12 44"/><path d="M10 30 L10 46 L25 46"/></svg>shipped,<br>not just demoed</p>
     <p class="rh-sub" data-fade>I'm Anubhav. I sit with a business, find the problem worth solving, and ship the AI system that fixes it, tested end to end.</p>
     <div class="rh-cta" data-fade>
       <a class="rh-btn magnetic" href="#contact">Work with me</a>
@@ -1450,7 +1449,7 @@ a.row-in:hover::before,button.row-in:hover::before,a.row-in:focus-visible::befor
   /* The strip names each piece of work as it plays */
   (function () {
     var v = $('.rh-band video'), t = $('#rh-t'), dd = $('#rh-d'); if (!v || !t) return;
-    var CH = [[0, 'Toorunt AI', 'Nothing ships without evidence'], [2.6, 'Toorunt AI', 'Every change clears 14 gates'], [5.2, 'CA Automation', 'A bank statement becomes ledger entries'], [7.8, 'NaviGoIn', 'A ride-hailing platform, public on Android'], [10.4, 'Restaurant Solution: Karigari', 'Each bill line checked before it is paid'], [13, 'E-commerce OS', 'Every marketplace fee recalculated'], [15.6, 'QSR Solution: Rolls King', 'Every order timed, outlet by outlet']];
+    var CH = [[0, 'Showreel', 'Six products, six kinds of business'], [7.2, 'Anubhav Khandelwal', 'CEO & Lead Engineer'], [10.8, 'Toorunt AI', 'Nothing ships without evidence'], [13.2, 'CA Automation', 'A bank statement becomes ledger entries'], [15.6, 'NaviGoIn', 'A ride-hailing app, public on Android'], [18, 'Restaurant Solution: Karigari', 'Each bill line checked before it is paid'], [20.4, 'E-commerce OS', 'Every marketplace fee recalculated'], [22.8, 'QSR Solution: Rolls King', 'Every order timed, outlet by outlet'], [25.2, 'Work with me', 'Bring me your problem']];
     var cur = -1;
     v.addEventListener('timeupdate', function () {
       var x = v.currentTime, k = 0;
